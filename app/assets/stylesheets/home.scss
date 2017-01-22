@@ -1,0 +1,113 @@
+.home-banner {
+  height: 400px;
+  background-image: url('/images/home/banner.jpg');
+  background-size: cover;
+  position: relative;
+}
+.home-banner-title {
+  color: white;
+  font-size: 3.5em;
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 100px;
+}
+.home-banner-subtitle {
+  color: white;
+  font-size: 1.4em;
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 10px;
+}
+.home-buttons {
+  padding-top: 100px;
+  a {
+    margin: 0 10px;
+  }
+}
+.home-section {
+  padding: 100px 0;
+  border-bottom: 1px solid #DDD;
+  &.gray-section {
+    background-color: #f6f6f6;
+  }
+  .title {
+    font-size: 2.8em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .desc {
+    font-size: 1em;
+    line-height: 24px;
+    color: #666;
+  }
+  .side {
+    width: 50%;
+    padding: 0 50px;
+  }
+  .college-logo {
+    height: 80px;
+    margin: 0 5px 5px 5px;
+  }
+  .tables {
+    // border: 1px solid rgba(0,0,0,.05);
+  }
+  .table-section {
+    width: 33.33333%;
+    display: inline-block;
+    float: left;
+    box-sizing: border-box;
+    background-color: #fff;
+    height: 250px;
+    border-right: 1px solid rgba(0,0,0,.05);
+    border-top: 1px solid rgba(0,0,0,.05);
+    .detail {
+      padding: 30px 15px 15px;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+      background-color: #fff;
+      z-index: 0;
+      height: 100%;
+      &:after {
+        content: "";
+        -webkit-transition: all .1s linear;
+        -moz-transition: all .1s linear;
+        -ms-transition: all .1s linear;
+        -o-transition: all .1s linear;
+        transition: all .1s linear;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        padding: 10px;
+        background-color: #fff;
+        z-index: -1;
+        border-top: 2px solid rgba(0, 0, 0, 0);
+        opacity: 0;        
+      }
+    }
+    .table-title {
+      color: #333;
+      font-size: 20px;
+      line-height: 22px;
+      margin-bottom: 10px;
+      margin-top: 0;
+      img {
+        height: 22px;
+      }
+    }
+    .table-desc {
+      color: #777;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 1em;
+    }
+    .bottom-link {
+      position: absolute;
+      bottom: 20px;
+      left: 15px;
+    }
+  }
+}
