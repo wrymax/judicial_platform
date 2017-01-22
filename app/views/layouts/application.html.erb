@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JudicialPlatform</title>
+    <title>湖北科技司法鉴定中心 - 农业鉴定、知识产权</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -9,26 +9,8 @@
   </head>
 
   <body>
-    <nav class="navbar header-nav">
-      <div class='container-fluid'>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
-          <div class='container'>
-            <img src="/images/home/logo.jpg" class='pull-left nav-logo' />
-            <ul class="nav navbar-nav"> 
-              <li class="active">
-                <a href="#">鉴定专家</a>
-              </li> 
-              <li>
-                <a href="#">典型案例</a>
-              </li> 
-              <li>
-                <a href="#">鉴定领域</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <%= render 'layouts/nav' %> 
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
