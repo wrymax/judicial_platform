@@ -11,5 +11,10 @@ module JudicialPlatform
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    # I18N
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', 
+        '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :"zh-CN"
   end
 end

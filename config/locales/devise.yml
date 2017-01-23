@@ -1,0 +1,8 @@
+zh-CN:
+  devise:
+    failure:
+      user:
+        not_found_in_database: 找不到该用户
+    registrations:
+      user:
+        signed_up: 您已成功注册账户！

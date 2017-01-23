@@ -1,12 +1,18 @@
 nav.navbar.header-nav
-  .container-fluid'
+  .container-fluid
      .collapse.navbar-collapse#bs-example-navbar-collapse-9
        .container
           img src="/images/home/logo.jpg" class='pull-left nav-logo'
-            ul class="nav navbar-nav"
-              li.active
-                = link_to "鉴定专家", "#"
-              li
-                = link_to "典型案例", "#"
-              li
-                = link_to "鉴定领域", "#"
+          ul class="nav navbar-nav"
+            li.active
+              = link_to "鉴定专家", "#"
+            li
+              = link_to "典型案例", "#"
+            li
+              = link_to "鉴定领域", "#"
+          .pull-right
+            - if current_user
+              = current_user.email
+            - else
+              = link_to "登录", new_user_session_path
+
