@@ -15,7 +15,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 }
-.user-block {
+.user-block, .show-user-top {
   margin-top: 10px;
   height: 350px;
   float: left;
@@ -75,5 +75,40 @@
   }
   .tags, .license-no {
     margin-top: 20px;
+  }
+}
+.container.show-user {
+  margin: 20px auto;
+  .show-user-top {
+    width: 100%;
+    height: auto;
+    padding-bottom: 26px;
+    margin-bottom: 20px;
+    .pitch {
+      margin-bottom: 5px;
+    }
+  }
+  .show-user-desc {
+    width: 70%;
+    float: left;
+  }
+  .show-user-sidebar {
+    float: right;
+    width: 29%;
+  }
+  .show-user-sidebar, .show-user-desc {
+    background: #fff;
+    position: relative;
+    box-shadow: 3px 3px 10px #eee;
+    padding: 20px 15px;
+    .show-user-title {
+      color: #333;
+      border-left: 3px solid rgba(82, 138, 233, 0.85);
+      padding-left: 6px;
+    }
+    .content {
+      margin-bottom: 30px;
+    }
+
   }
 }

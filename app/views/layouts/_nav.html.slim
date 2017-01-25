@@ -13,7 +13,7 @@ nav.navbar.header-nav
              = link_to "鉴定领域", "#"
          .pull-right
            - if current_user
-             = link_to user_path(current_user), class: 'nav-avatar' do
+             = link_to dashboard_users_path, class: 'nav-avatar' do
               = image_tag current_user.avatar(:thumb)
            - else
              = link_to "登录", new_user_session_path

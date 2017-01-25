@@ -1,0 +1,34 @@
+.container.show-user
+  .show-user-top
+    .avatar.text-center
+      = render 'users/avatar', user: @user
+    .name
+      = link_to @user.name, user_path(@user)
+    .pitch
+      = @user.pitch
+    = render partial: 'tags/tag_block', collection: @user.keywords, as: :tag
+
+  .show-user-desc
+    h4.show-user-title
+      | 执业证号
+    .content
+      = @user.expert_profile.license_no
+    h4.show-user-title
+      | 专家介绍
+    .content
+      = simple_format @user.resume
+
+  .show-user-sidebar
+    section.section
+      h4.show-user-title
+        | 参与案例
+      .content
+        | 暂无 TODO：列出参与案例
+      
+    section.section
+      h4.show-user-title
+        | 相关专家
+      .content
+        | 暂无 TODO：列出相关专家
+
+  .clear

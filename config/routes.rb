@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       get :experts
+      get :dashboard
     end
   end
 end
