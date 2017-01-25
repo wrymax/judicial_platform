@@ -1,0 +1,21 @@
+.user-block
+  .avatar.text-center
+    = render 'users/avatar', user: user
+  .name
+    = link_to user.name, user_path(user)
+  .pitch
+    = user.pitch
+  .tags
+    .caption
+      span
+        | 专业领域
+    .content
+      = render partial: 'tags/tag_block', collection: user.keywords, as: :tag
+
+  .license-no
+    .caption
+      span
+        | 执业证号
+    .content
+      = user.expert_profile.license_no
+

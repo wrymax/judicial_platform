@@ -1,0 +1,79 @@
+.users-list {
+  margin: 20px auto;
+}
+.user-avatar-link {
+  display: inline-block;
+  border: 1px solid #EEE;
+  padding: 1px;
+  border-radius: 100%;  
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+  }
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+.user-block {
+  margin-top: 10px;
+  height: 350px;
+  float: left;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  background: #fff;
+  width: 24%;
+  text-align: center;
+  font-size: 12px;
+  position: relative;
+  box-shadow: 3px 3px 10px #eee;
+  .avatar {
+    padding: 26px 0 20px 0;
+  }
+  .name a {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 15px;
+    height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &:hover {
+      color: #3c8cf0;
+    }
+  }
+  .pitch {
+    color: #374052;
+    padding: 4px 10px;
+    height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .caption {
+    position: relative;
+    display: inline-block;
+    &:after {
+      content: " ";
+      display: block;
+      height: 1px;
+      width: 100%;
+      display: block;
+      background: #eaedf5;
+      position: absolute;
+      bottom: 50%;
+    }
+    span {
+      padding: 0 5px;
+      margin: 0 10px;
+      background: #fff;
+      position: relative;
+      z-index: 5;
+      color: #888da3; 
+    }
+  }
+  .tags, .license-no {
+    margin-top: 20px;
+  }
+}

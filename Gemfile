@@ -5,14 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# server, db
 gem 'rails', '~> 5.0.1'
 gem 'mysql2'
 gem 'puma', '~> 3.0'
 
-gem 'devise'
-
+# front-end
 gem 'slim-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -20,7 +18,13 @@ gem 'coffee-rails', '~> 4.2'
 gem 'therubyracer', platforms: :ruby
 gem 'jquery-rails'
 
+# backend helpers
+gem 'devise'
 gem 'simple_form'
+gem 'acts-as-taggable-on', '~> 4.0'
+gem 'will_paginate', '~> 3.1.0'
+gem "paperclip", "~> 5.0.0"
+
 # gem 'turbolinks', '~> 5'
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
