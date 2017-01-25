@@ -12,4 +12,7 @@ Rails.application.routes.draw do
       get :dashboard
     end
   end
+
+  resources :judicial_cases do
+  end
 end

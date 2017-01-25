@@ -1,7 +1,7 @@
 .user-block
   .avatar.text-center
     = render 'users/avatar', user: user
-  .name
+  h4.name
     = link_to user.name, user_path(user)
   .pitch
     = user.pitch

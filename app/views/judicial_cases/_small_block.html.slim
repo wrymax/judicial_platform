@@ -1,0 +1,5 @@
+.small-case-block
+  .name
+    = link_to judicial_case.name, judicial_case_path(judicial_case)
+  .pitch
+    = judicial_case.content.truncate(30)

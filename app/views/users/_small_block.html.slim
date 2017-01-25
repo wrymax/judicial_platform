@@ -1,0 +1,9 @@
+.small-user-block
+  .pull-left.avatar
+    = render 'users/avatar', user: user
+  .pull-right.info
+    .name
+      = link_to user.name, user_path(user)
+    .pitch
+      = user.pitch
+  .clear

@@ -1,0 +1,17 @@
+.judicial-case-block
+  h4.name
+    = link_to judicial_case.name, judicial_case_path(judicial_case)
+  .content
+    = judicial_case.content.truncate(100)
+
+  .experts
+    span
+      | 负责专家
+    = render partial: 'users/avatar', collection: judicial_case.experts, as: :user
+
+  .other-info
+    .tags.pull-left
+      = render partial: 'tags/tag_block', collection: judicial_case.keywords, as: :tag
+    .pull-right
+      = judicial_case.created_at.to_date
+    .clear

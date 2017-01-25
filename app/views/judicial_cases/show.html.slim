@@ -1,0 +1,34 @@
+.container
+  .show-judicial-case
+    .pull-left.judicial-case-main
+      h3.name
+        = @judicial_case.name
+      .tags
+        span
+          | 鉴定范围
+        = render partial: 'tags/tag_block', collection: @judicial_case.keywords, as: :tag
+
+      .time
+        span
+          | 发表时间
+        = @judicial_case.created_at.to_date
+
+      .content
+        = simple_format @judicial_case.content
+
+    .pull-right.judicial-case-sidebar
+      section.section
+        h4.show-case-title
+          | 负责专家
+        .content
+          = render partial: 'users/small_block', collection: @judicial_case.experts, as: :user
+          
+        
+    .pull-right.judicial-case-sidebar
+      section.section
+        h4.show-case-title
+          | 相关案例
+        .content
+          | 暂无 TODO：列出相关案例
+
+    .clear

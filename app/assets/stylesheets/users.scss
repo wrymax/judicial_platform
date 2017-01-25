@@ -28,11 +28,10 @@
   position: relative;
   box-shadow: 3px 3px 10px #eee;
   .avatar {
-    padding: 26px 0 20px 0;
+    padding: 26px 0 14px 0;
   }
   .name a {
     color: #333;
-    font-size: 16px;
     font-weight: 500;
     padding: 0 15px;
     height: 25px;
@@ -91,6 +90,9 @@
   .show-user-desc {
     width: 70%;
     float: left;
+    p {
+      line-height: 22px;
+    }
   }
   .show-user-sidebar {
     float: right;
@@ -101,6 +103,7 @@
     position: relative;
     box-shadow: 3px 3px 10px #eee;
     padding: 20px 15px;
+    margin-bottom: 20px;
     .show-user-title {
       color: #333;
       border-left: 3px solid rgba(82, 138, 233, 0.85);

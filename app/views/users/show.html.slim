@@ -2,7 +2,7 @@
   .show-user-top
     .avatar.text-center
       = render 'users/avatar', user: @user
-    .name
+    h4.name
       = link_to @user.name, user_path(@user)
     .pitch
       = @user.pitch
@@ -23,8 +23,12 @@
       h4.show-user-title
         | 参与案例
       .content
-        | 暂无 TODO：列出参与案例
+        - if @cases.present?
+          = render partial: 'judicial_cases/small_block', collection: @cases, as: :judicial_case
+        - else
+          | 暂无
       
+  .show-user-sidebar
     section.section
       h4.show-user-title
         | 相关专家
