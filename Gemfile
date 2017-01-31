@@ -24,6 +24,7 @@ gem 'simple_form'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'will_paginate', '~> 3.1.0'
 gem "paperclip", "~> 5.0.0"
+gem 'cancancan'
 
 # gem 'turbolinks', '~> 5'
 # gem 'jbuilder', '~> 2.5'

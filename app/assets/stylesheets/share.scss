@@ -1,3 +1,4 @@
+// share styles
 body {
   font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,STHeitiSC-Light,simsun,\\5B8B\4F53,WenQuanYi Zen Hei,WenQuanYi Micro Hei,"sans-serif";
   background: #f6f6f6;
@@ -9,6 +10,19 @@ a {
     text-decoration: none;
     color: #3c8cf0;
   }
+}
+.clear {
+  clear: both;
+}
+
+// composition styles
+.white-board {
+  background: white;
+}
+
+// components
+.main-container {
+  margin: 20px 0;
 }
 .header-nav {
   border-radius: 0;
@@ -38,7 +52,4 @@ a {
   background-color: #333;
   color: #ccc;
   padding: 20px 0;
-}
-.clear {
-  clear: both;
 }

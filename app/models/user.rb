@@ -22,6 +22,10 @@ class User < ApplicationRecord
   }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
+  validates :name, length: { within: 1..20 }
+  validates :pitch, length: { within: 1..30 }
+  validates :resume, length: { within: 1..3000 }
+
   # 权限控制
   def admin?
     is_admin

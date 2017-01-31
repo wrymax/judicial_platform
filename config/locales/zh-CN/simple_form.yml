@@ -16,11 +16,15 @@ zh-CN:
         password: 密码
         password_confirmation: 确认密码
       user:
-        new:
-          email: 常用邮箱
-          remember_me: 记住我
-        edit:
-          email: 常用邮箱
+        remember_me: 记住我
+        email: 常用邮箱
+        avatar: 头像
+        resume: 个人简介
+        pitch: 一句话简介
+        keyword_list: 鉴定领域
+        name: 真实姓名
+      expert_profile:
+        license_no: 执业证号
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'
@@ -39,3 +43,5 @@ zh-CN:
             password_confirmation:
               confirmation: 两次密码输入不一致，请重新输入
 
+            resume:
+              too_long: 个人简介过长，请控制在3000字以内

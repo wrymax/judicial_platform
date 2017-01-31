@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       get :experts
-      get :dashboard
+      get :personal
+      get :my_needs
     end
   end
 
