@@ -8,7 +8,7 @@
       = @user.pitch
     = render partial: 'tags/tag_block', collection: @user.keywords, as: :tag
 
-  .show-user-desc
+  .show-user-desc.pull-left
     h4.show-user-title
       | 执业证号
     .content
@@ -18,21 +18,25 @@
     .content
       = simple_format @user.resume
 
-  .show-user-sidebar
-    section.section
-      h4.show-user-title
-        | 参与案例
-      .content
-        - if @cases.present?
-          = render partial: 'judicial_cases/small_block', collection: @cases, as: :judicial_case
-        - else
-          | 暂无
-      
-  .show-user-sidebar
-    section.section
-      h4.show-user-title
-        | 相关专家
-      .content
-        | 暂无 TODO：列出相关专家
+  .user-sidebar.pull-right
+    .show-user-sidebar
+      section.section
+        h4.show-user-title
+          | 参与案例
+        .content
+          - if @cases.present?
+            = render partial: 'judicial_cases/small_block', collection: @cases, as: :judicial_case
+          - else
+            | 暂无
+        
+    .show-user-sidebar
+      section.section
+        h4.show-user-title
+          | 相关专家
+        .content
+          - if @similar_experts.present?
+            = render partial: 'users/small_block', collection: @similar_experts, as: :user
+          - else
+            | 暂无
 
-  .clear
+    .clear

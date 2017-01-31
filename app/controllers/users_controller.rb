@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user.expert?
       @cases = @user.judicial_cases.latest.paginate(page: 1, per_page: 4)
+      @similar_experts = @user.similar_experts.paginate(page: 1, per_page: 4)
     end
   end
 

@@ -29,6 +29,9 @@
         h4.show-case-title
           | 相关案例
         .content
-          | 暂无 TODO：列出相关案例
+          - if @similar_cases.present?
+            = render partial: 'judicial_cases/small_block', collection: @similar_cases, as: :judicial_case
+          - else
+            | 暂无
 
     .clear

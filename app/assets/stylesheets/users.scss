@@ -81,6 +81,7 @@
   .show-user-top {
     width: 100%;
     height: auto;
+    margin: auto 0;
     padding-bottom: 26px;
     margin-bottom: 20px;
     .pitch {
@@ -88,14 +89,15 @@
     }
   }
   .show-user-desc {
-    width: 70%;
-    float: left;
+    width: 69%;
+    // float: left;
+    margin-right: 1%;
     p {
       line-height: 22px;
     }
   }
-  .show-user-sidebar {
-    float: right;
+  .user-sidebar {
+    // float: right;
     width: 29%;
   }
   .show-user-sidebar, .show-user-desc {
@@ -112,6 +114,31 @@
     .content {
       margin-bottom: 30px;
     }
-
+  }
+  .show-user-sidebar {
+    // width: 30%;
+    margin-bottom: 20px;
+    .show-case-title {
+      border-bottom: 1px solid #EEE;
+      padding-bottom: 10px;
+    }
+    .small-user-block {
+      margin: 20px 0;
+      .avatar {
+        margin-right: 10px;
+        width: 21%;
+        img {
+          width: 60px;
+          height: 60px;
+        }
+      }
+      .info {
+        width: 75%;
+        .name a {
+          font-size: 16px;
+          color: #333;
+        }
+      }
+    }
   }
 }
