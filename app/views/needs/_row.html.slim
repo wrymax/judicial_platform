@@ -1,0 +1,11 @@
+.need-row
+
+  = simple_format need.content.truncate(100)
+  .demander
+    | 需求方:
+    = need.demander.name
+
+  .status
+    | 状态:
+    = I18n.t("custom.need.status.#{need.status}")
+

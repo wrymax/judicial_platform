@@ -16,4 +16,6 @@ Rails.application.routes.draw do
 
   resources :judicial_cases do
   end
+
+  resources :needs
 end

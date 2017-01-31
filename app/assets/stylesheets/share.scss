@@ -19,10 +19,13 @@ a {
 .white-board {
   background: white;
 }
+.padding {
+  padding: 20px 15px;
+}
 
 // components
 .main-container {
-  margin: 20px 0;
+  margin: 20px auto;
 }
 .header-nav {
   border-radius: 0;
@@ -42,6 +45,10 @@ a {
       height: 40px;
       width: 40px;
     }
+  }
+  .login-link {
+    line-height: 50px;
+    color: #666;
   }
 }
 .nav-logo {

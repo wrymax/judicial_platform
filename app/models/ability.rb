@@ -15,6 +15,7 @@ class Ability
     can :manage, User do |u|
       u.admin? || u == user
     end
+
   end
 end
 

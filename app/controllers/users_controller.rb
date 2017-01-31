@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!, only: [:personal, :my_needs]
-
   load_and_authorize_resource :user, only: [:update]
 
   def experts

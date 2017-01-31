@@ -25,6 +25,9 @@ zh-CN:
         name: 真实姓名
       expert_profile:
         license_no: 执业证号
+      need:
+        content: 内容
+        keyword_list: 鉴定领域
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'
@@ -45,3 +48,17 @@ zh-CN:
 
             resume:
               too_long: 个人简介过长，请控制在3000字以内
+  devise:
+    sessions:
+      user:
+        signed_out: 账号已安全退出
+        signed_in: 您已成功登录账号
+
+  custom:
+    need:
+      status:
+        pending: 待处理
+        processing: 正在处理
+        working: 鉴定工作中
+        complete: 鉴定完成
+        canceled: 已取消

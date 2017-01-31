@@ -16,4 +16,6 @@ nav.navbar.header-nav
              = link_to personal_users_path, class: 'nav-avatar' do
               = image_tag current_user.avatar(:thumb)
            - else
-             = link_to "登录", new_user_session_path
+             = link_to "登录", new_user_session_path, class: 'login-link'
+             |  /  
+             = link_to "注册", new_user_registration_path, class: 'login-link'

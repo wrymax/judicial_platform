@@ -1,0 +1,8 @@
+.need-row {
+  border-bottom: 1px solid #EEE;
+
+  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

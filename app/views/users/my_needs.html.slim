@@ -1,7 +1,10 @@
-.container
+.container.main-container
   = render 'users/dashboard_sidebar'
 
-  .pull-right.dashboard-main
+  .pull-right.dashboard-main.white-board.padding
     .needs-list
-      | TODO: 我的鉴定需求列表
+      - if @needs.present?
+        = render partial: 'needs/row', collection: @needs, as: :need
+      - else
+        | 暂无鉴定需求
 

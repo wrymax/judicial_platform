@@ -1,0 +1,11 @@
+.container.main-container
+  .white-board.padding
+    h4
+      | 提交鉴定需求
+    hr
+
+    = simple_form_for Need.new do |f|
+      = f.input :keyword_list
+      = f.input :content, input_html: { rows: 15 }
+
+      = f.submit "提交需求"
