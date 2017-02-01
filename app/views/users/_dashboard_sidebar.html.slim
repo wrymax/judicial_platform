@@ -1,10 +1,7 @@
 .pull-left.dashboard-sidebar
-  .white-board
-    ul
-      li
-        = link_to "修改个人资料", personal_users_path
-      li
-        = link_to "我的鉴定需求", my_needs_users_path
+  .list-group
+    = link_to "修改个人资料", personal_users_path, class: "list-group-item #{"active" if params[:action] == 'personal'}"
+    = link_to "我的鉴定需求", my_needs_users_path, class: "list-group-item #{"active" if params[:action] == 'my_needs'}"
 
   .text-center
     = link_to "安全退出账号", destroy_user_session_path, method: :delete, class: 'btn btn-danger btn-outline'

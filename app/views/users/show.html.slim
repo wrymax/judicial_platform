@@ -1,5 +1,5 @@
 .container.show-user
-  .show-user-top
+  .show-user-top.white-board
     .avatar.text-center
       = render 'users/avatar', user: @user
     h4.name
@@ -8,7 +8,7 @@
       = @user.pitch
     = render partial: 'tags/tag_block', collection: @user.keywords, as: :tag
 
-  .show-user-desc.pull-left
+  .show-user-desc.pull-left.white-board.padding
     h4.show-user-title
       | 执业证号
     .content
@@ -19,7 +19,7 @@
       = simple_format @user.resume
 
   .user-sidebar.pull-right
-    .show-user-sidebar
+    .show-user-sidebar.white-board.padding
       section.section
         h4.show-user-title
           | 参与案例
@@ -29,7 +29,7 @@
           - else
             | 暂无
         
-    .show-user-sidebar
+    .show-user-sidebar.white-board.padding
       section.section
         h4.show-user-title
           | 相关专家

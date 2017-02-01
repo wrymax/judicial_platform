@@ -1,6 +1,6 @@
 .container
   .show-judicial-case
-    .pull-left.judicial-case-main
+    .pull-left.judicial-case-main.white-board.padding
       h3.name
         = @judicial_case.name
       .tags
@@ -16,7 +16,7 @@
       .content
         = simple_format @judicial_case.content
 
-    .pull-right.judicial-case-sidebar
+    .pull-right.judicial-case-sidebar.white-board.padding
       section.section
         h4.show-case-title
           | 负责专家
@@ -24,7 +24,7 @@
           = render partial: 'users/small_block', collection: @judicial_case.experts, as: :user
           
         
-    .pull-right.judicial-case-sidebar
+    .pull-right.judicial-case-sidebar.white-board.padding
       section.section
         h4.show-case-title
           | 相关案例
