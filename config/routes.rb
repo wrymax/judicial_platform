@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   end
 
   resources :needs
+  resources :first_level_tags
 end

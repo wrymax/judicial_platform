@@ -1,0 +1,2 @@
+module FirstLevelTagsHelper
+end

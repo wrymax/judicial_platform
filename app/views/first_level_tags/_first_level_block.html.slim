@@ -1,0 +1,11 @@
+.first-level-block.white-board
+  .first-level-info.pull-left.padding
+    .title
+      = first_level_tag.name
+    .description
+      = first_level_tag.description
+
+  .tags.pull-right.padding
+    = render partial: 'tags/tag_block', collection: first_level_tag.tags, as: :tag
+    .clear
+  .clear
