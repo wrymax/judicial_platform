@@ -1,7 +1,7 @@
 .container.main-container
   = render 'users/dashboard_sidebar'
 
-  .pull-right.dashboard-main.white-board.padding
+  .pull-right.dashboard-main.white-board
     .needs-list
       - if @needs.present?
         = render partial: 'needs/row', collection: @needs, as: :need
