@@ -10,7 +10,7 @@ nav.navbar.header-nav
            li
              = link_to "典型案例", judicial_cases_path
            li
-             = link_to "鉴定领域", "#"
+             = link_to "鉴定领域", first_level_tags_path
          .pull-right
            - if current_user
              = link_to personal_users_path, class: 'nav-avatar' do
