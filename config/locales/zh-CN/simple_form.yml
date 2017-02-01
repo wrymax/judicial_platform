@@ -26,6 +26,7 @@ zh-CN:
       expert_profile:
         license_no: 执业证号
       need:
+        title: 标题
         content: 内容
         keyword_list: 鉴定领域
     # hints:
@@ -45,9 +46,21 @@ zh-CN:
           attributes:
             password_confirmation:
               confirmation: 两次密码输入不一致，请重新输入
-
+            email:
+              taken: 该邮箱已被使用
+            password:
+              blank: 密码不能为空
             resume:
-              too_long: 个人简介过长，请控制在3000字以内
+              too_long: 个人简介过长，请控制在1 - 3000字
+              too_short: 个人简介过短，请控制在1 - 3000字
+            name:
+              too_long: 真实姓名过长，请控制在1 - 20字
+              too_short: 真实姓名过短，请控制在1 - 20字
+            pitch:
+              too_long: 一句话简介过长，请控制在1 - 30字
+              too_short: 一句话简介过短，请控制在1 - 30字
+      messages:
+        not_saved: 数据存储失败 
   devise:
     sessions:
       user:

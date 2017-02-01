@@ -22,9 +22,11 @@ class User < ApplicationRecord
   }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
-  validates :name, length: { within: 1..20 }
-  validates :pitch, length: { within: 1..30 }
-  validates :resume, length: { within: 1..3000 }
+  attr_accessor :validate_name, :validate_pitch, :validate_resume
+
+  validates :name, length: { within: 1..20 }, if: :validate_name?
+  validates :pitch, length: { within: 1..30 }, if: :validate_pitch?
+  validates :resume, length: { within: 1..3000 }, if: :validate_resume?
 
   # 权限控制
   def admin?
@@ -91,4 +93,17 @@ class User < ApplicationRecord
   def clear_coordinates
     unvalidate_update!({:crop_x => nil, :crop_y => nil, :crop_w => nil, :crop_h => nil})
   end
+
+  def validate_name?
+    @validate_name
+  end
+
+  def validate_pitch?
+    @validate_pitch
+  end
+
+  def validate_resume?
+    @validate_resume
+  end
+
 end

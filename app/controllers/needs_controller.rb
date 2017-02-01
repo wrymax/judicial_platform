@@ -1,5 +1,6 @@
 class NeedsController < ApplicationController
   before_filter :authenticate_user!
+  load_and_authorize_resource :need, only: [:show]
 
   def new 
   end
@@ -12,6 +13,11 @@ class NeedsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @need = Need.find(params[:id])
+    @experts = @need.experts
   end
 
   protected

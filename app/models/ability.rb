@@ -16,6 +16,11 @@ class Ability
       u.admin? || u == user
     end
 
+    alias_action :show, to: :manage
+    can :manage, Need do |n|
+      user.admin? || user == n.demander || n.experts.include?(user)
+    end
+
   end
 end
 

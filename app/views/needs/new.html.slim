@@ -5,6 +5,7 @@
     hr
 
     = simple_form_for Need.new do |f|
+      = f.input :title
       = f.input :keyword_list
       = f.input :content, input_html: { rows: 15 }
 

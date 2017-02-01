@@ -1,6 +1,8 @@
 .need-row
-
-  = simple_format need.content.truncate(100)
+  h4.title
+    = link_to need.title, need_path(need)
+  .content
+    = simple_format need.content.truncate(100)
   .demander
     | 需求方:
     = need.demander.name

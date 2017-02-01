@@ -1,0 +1,22 @@
+.container.main-container
+  .white-board.padding
+    h4.title
+      = @need.title
+    hr
+    .demander
+      | 需求方：
+      = @need.demander.name
+    .experts
+      | 鉴定专家：
+      - if @experts.present?
+        = render partial: 'users/avatar', collection: @experts, as: :user
+      - else
+        | 等待分配
+
+
+    .status
+      | 状态：
+      = @need.i18n_status
+    .content
+      br
+      = simple_format @need.content
