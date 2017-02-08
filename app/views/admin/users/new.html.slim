@@ -1,0 +1,23 @@
+.white-board.padding
+  = simple_form_for ['admin', @user] do |f|
+    legend
+      | 账户信息
+    fieldset
+      = f.input :email
+      = f.input :phone
+      = f.input :password
+
+    br
+
+    legend
+      | 专家信息
+    fieldset
+      = f.input :avatar
+      = f.input :name
+      = f.input :pitch
+      = f.input :keyword_list
+      = f.simple_fields_for @expert_profile || ExpertProfile.new do |p|
+        = p.input :license_no
+      = f.input :resume, input_html: { rows: 15 }
+
+    = f.submit "添加专家", class: 'btn btn-outline btn-primary'

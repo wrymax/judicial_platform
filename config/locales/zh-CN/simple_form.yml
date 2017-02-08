@@ -19,6 +19,7 @@ zh-CN:
         remember_me: 记住我
         email: 常用邮箱
         avatar: 头像
+        phone: 手机号
         resume: 个人简介
         pitch: 一句话简介
         keyword_list: 鉴定领域
@@ -39,6 +40,9 @@ zh-CN:
     # prompts:
     #   defaults:
     #     age: 'Select your age'
+  errors:
+    messages:
+      not_saved: 数据保存失败
   activerecord:
     errors:
       models:
@@ -48,6 +52,7 @@ zh-CN:
               confirmation: 两次密码输入不一致，请重新输入
             email:
               taken: 该邮箱已被使用
+              blank: 邮箱不能为空
             password:
               blank: 密码不能为空
             resume:

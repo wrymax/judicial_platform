@@ -1,0 +1,11 @@
+= simple_form_for ['admin', @user] do |f|
+  = f.input :avatar
+  = f.input :name
+  = f.input :pitch
+  = f.input :keyword_list
+  - if @user.expert?
+    = f.simple_fields_for @user.expert_profile do |p|
+      = p.input :license_no
+  = f.input :resume, input_html: { rows: 15 }
+
+  = f.submit "更新信息", class: 'btn btn-outline btn-primary'
