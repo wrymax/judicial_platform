@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :judicial_cases, through: :case_experts
   has_many :need_experts, dependent: :destroy
   scope :experts, ->{ where('user_type = ?', 'expert') }
+  scope :latest, ->{ order('id desc') }
 
   has_attached_file :avatar, {
     styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/default/user.png",
@@ -31,6 +32,10 @@ class User < ApplicationRecord
   # 权限控制
   def admin?
     is_admin
+  end
+
+  def admin!
+    update(is_admin: true)
   end
 
   # 专家？

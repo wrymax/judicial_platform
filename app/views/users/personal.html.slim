@@ -1,7 +1,7 @@
 .container.main-container
   = render 'users/dashboard_sidebar'
 
-  .pull-right.dashboard-main.white-board
+  .pull-right.dashboard-main.white-board.padding
     = simple_form_for current_user do |f|
       = f.input :avatar
       = f.input :name

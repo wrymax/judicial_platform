@@ -5,7 +5,7 @@ nav.navbar.header-nav
          = link_to '/' do
            img src="/images/home/logo.jpg" class='pull-left nav-logo'
          ul class="nav navbar-nav"
-           li.active
+           li
              = link_to "鉴定专家", experts_users_path
            li
              = link_to "典型案例", judicial_cases_path
@@ -13,6 +13,10 @@ nav.navbar.header-nav
              = link_to "鉴定领域", first_level_tags_path
          .pull-right
            - if current_user
+             - if current_user.admin?
+               ul class="nav navbar-nav"
+                 li
+                   = link_to "管理中心", admin_users_path
              = link_to personal_users_path, class: 'nav-avatar' do
               = image_tag current_user.avatar(:thumb)
            - else

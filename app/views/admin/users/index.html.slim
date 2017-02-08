@@ -1,0 +1,7 @@
+.white-board
+  table.table.users-table#experts
+    = render partial: 'admin/users/row', collection: @experts, as: :user
+    .clear
+
+  .pagination
+    = will_paginate @experts, renderer: BootstrapPagination::Rails

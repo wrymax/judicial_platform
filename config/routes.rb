@@ -19,4 +19,9 @@ Rails.application.routes.draw do
 
   resources :needs
   resources :first_level_tags
+
+  # 管理员
+  namespace :admin do
+    resources :users
+  end
 end

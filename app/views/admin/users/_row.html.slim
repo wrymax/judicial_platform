@@ -1,0 +1,19 @@
+tr
+  td.avatar-td
+    .avatar
+      = image_tag user.avatar(:thumb)
+  td.info-td
+    h4.name
+      = link_to user.name, user_path(user), target: '_blank'
+    .pitch
+      = user.pitch
+
+    .license-no
+      span
+        | 执业证号: 
+      = user.expert_profile.license_no
+    .tags
+      = render partial: 'tags/tag_block', collection: user.keywords, as: :tag
+
+  td.edit-td
+    = link_to "编辑", edit_admin_user_path(user)

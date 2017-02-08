@@ -1,0 +1,20 @@
+table.users-table {
+  tr {
+    td {
+      padding: 15px 10px;
+    }
+    .avatar-td {
+      width: 120px;
+      .avatar {
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 100px;
+        }
+      }
+    }
+    .info-td {
+      width: 80%;
+    }
+  }
+}
