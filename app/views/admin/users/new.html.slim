@@ -1,23 +1,24 @@
 .white-board.padding
-  = simple_form_for ['admin', @user] do |f|
+  = simple_form_for ['admin', @user], validate: true do |f|
     legend
       | 账户信息
     fieldset
-      = f.input :email
-      = f.input :phone
-      = f.input :password
-
+      = f.input :email, required: true, validate: true
+      = f.input :phone, required: true, validate: true
+      = f.input :password, required: true, validate: true
+      = f.input :password_confirmation, autocomplete: "off", validate: true
     br
 
     legend
       | 专家信息
     fieldset
-      = f.input :avatar
-      = f.input :name
-      = f.input :pitch
-      = f.input :keyword_list
-      = f.simple_fields_for @expert_profile || ExpertProfile.new do |p|
-        = p.input :license_no
-      = f.input :resume, input_html: { rows: 15 }
+      = f.input :avatar, required: true, validate: true
+      = f.input :name, required: true, validate: true
+      = f.input :pitch, required: true, validate: true
+      /= f.input :keyword_list, required: true, validate: true
+      = f.input :keyword_list, as: :select, multiple: true, collection: Tag.keyword_list, validate: true, required: true, input_html: { class: 'select2' }
+      = f.simple_fields_for @expert_profile || ExpertProfile.new, validate: true do |p|
+        = p.input :license_no, required: true, validate: true
+      = f.input :resume, input_html: { rows: 15 }, required: true, validate: true
 
     = f.submit "添加专家", class: 'btn btn-outline btn-primary'

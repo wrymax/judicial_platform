@@ -19,5 +19,11 @@
     <%= render 'layouts/flash_message' %>
     <%= yield %>
     <%= render 'layouts/footer' %>
+    
+    <script type="text/javascript">
+      $(function(){
+        $('select.select2').select2();
+      })
+    </script>
   </body>
 </html>

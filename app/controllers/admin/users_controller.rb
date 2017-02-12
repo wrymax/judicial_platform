@@ -1,6 +1,7 @@
 class Admin::UsersController < Admin::ApplicationController
   def new
     @user = User.new
+    validate_all_fields(@user)
   end
 
   def index
@@ -9,6 +10,7 @@ class Admin::UsersController < Admin::ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    validate_all_fields(@user)
   end
 
   def update
@@ -45,5 +47,11 @@ class Admin::UsersController < Admin::ApplicationController
 
   def expert_profile_params
     params[:expert_profile].permit!
+  end
+
+  def validate_all_fields(user)
+    %w(name phone pitch resume keyword_list).each do |column|
+      user.send("validate_#{column}=", true)
+    end
   end
 end

@@ -23,11 +23,13 @@ class User < ApplicationRecord
   }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
-  attr_accessor :validate_name, :validate_pitch, :validate_resume
+  attr_accessor :validate_name, :validate_pitch, :validate_resume, :validate_phone, :validate_keyword_list
 
   validates :name, length: { within: 1..20 }, if: :validate_name?
+  validates :phone, length: { within: 1..20 }, if: :validate_phone?
   validates :pitch, length: { within: 1..30 }, if: :validate_pitch?
   validates :resume, length: { within: 1..3000 }, if: :validate_resume?
+  validates :keyword_list, presence: true, if: :validate_keyword_list?
 
   # 权限控制
   def admin?
@@ -99,16 +101,21 @@ class User < ApplicationRecord
     unvalidate_update!({:crop_x => nil, :crop_y => nil, :crop_w => nil, :crop_h => nil})
   end
 
-  def validate_name?
-    @validate_name
+  %w(name phone pitch resume keyword_list).each do |column|
+    define_method "validate_#{column}?" do
+      eval "@validate_#{column}"
+    end
   end
+  # def validate_name?
+  #   @validate_name
+  # end
 
-  def validate_pitch?
-    @validate_pitch
-  end
+  # def validate_pitch?
+  #   @validate_pitch
+  # end
 
-  def validate_resume?
-    @validate_resume
-  end
+  # def validate_resume?
+  #   @validate_resume
+  # end
 
 end

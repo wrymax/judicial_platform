@@ -1,11 +1,11 @@
-= simple_form_for ['admin', @user] do |f|
-  = f.input :avatar
-  = f.input :name
-  = f.input :pitch
-  = f.input :keyword_list
+= simple_form_for ['admin', @user], validate: true do |f|
+  = f.input :avatar, validate: true, required: true
+  = f.input :name, validate: true, required: true
+  = f.input :pitch, validate: true, required: true
+  = f.input :keyword_list, as: :select, multiple: true, collection: Tag.keyword_list, validate: true, required: true, input_html: { class: 'select2' }
   - if @user.expert?
-    = f.simple_fields_for @user.expert_profile do |p|
-      = p.input :license_no
-  = f.input :resume, input_html: { rows: 15 }
+    = f.simple_fields_for @user.expert_profile, validate: true do |p|
+      = p.input :license_no, validate: true, required: true
+  = f.input :resume, input_html: { rows: 15 }, validate: true, required: true
 
   = f.submit "更新信息", class: 'btn btn-outline btn-primary'
