@@ -23,5 +23,6 @@ Rails.application.routes.draw do
   # 管理员
   namespace :admin do
     resources :users
+    resources :judicial_cases
   end
 end

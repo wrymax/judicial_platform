@@ -1,0 +1,13 @@
+h4.admin-title
+  | 案例管理
+.admin-title-btn
+  = link_to "添加案例", new_admin_judicial_case_path, class: 'btn btn-primary btn-outline'
+.clear
+
+.white-board
+  table.table.users-table.judicial-cases-table#judicial_cases
+    = render partial: 'admin/judicial_cases/row', collection: @judicial_cases, as: :judicial_case
+    .clear
+
+  .page-wrapper
+    = will_paginate @judicial_cases, renderer: BootstrapPagination::Rails

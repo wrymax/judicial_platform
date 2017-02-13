@@ -1,0 +1,5 @@
+.pull-left.admin-sidebar
+  .list-group
+    = link_to "专家管理", admin_users_path, class: "list-group-item #{"active" if params[:controller] == 'admin/users'}"
+    = link_to "案例管理", admin_judicial_cases_path, class: "list-group-item #{"active" if params[:controller] == 'admin/judicial_cases'}"
+

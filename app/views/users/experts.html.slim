@@ -3,4 +3,5 @@
     = render partial: 'users/user_block', collection: @users, as: :user
     .clear
 
-    = will_paginate @users
+    .page-wrapper
+      = will_paginate @users, renderer: BootstrapPagination::Rails

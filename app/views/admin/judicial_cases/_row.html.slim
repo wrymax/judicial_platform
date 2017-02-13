@@ -1,0 +1,13 @@
+tr
+  td.info-td
+    h4.name
+      = link_to judicial_case.name, judicial_case_path(judicial_case), target: '_blank'
+    .pitch
+      = judicial_case.content.truncate(100)
+
+    .tags
+      = render partial: 'tags/tag_block', collection: judicial_case.keywords, as: :tag
+
+  td.edit-td
+    = link_to "编辑", edit_admin_judicial_case_path(judicial_case)
+

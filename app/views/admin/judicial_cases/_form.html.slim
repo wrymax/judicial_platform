@@ -1,0 +1,7 @@
+= simple_form_for ['admin', @judicial_case], validate: true do |f|
+  = f.input :name, validate: true, required: true
+  = f.input :content, validate: true, required: true, input_html: { rows: 15 }
+  = f.input :keyword_list, as: :select, multiple: true, collection: Tag.keyword_list, validate: true, required: true, input_html: { class: 'select2' }
+
+  = f.submit "更新信息", class: 'btn btn-outline btn-primary'
+

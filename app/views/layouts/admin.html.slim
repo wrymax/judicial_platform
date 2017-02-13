@@ -12,9 +12,7 @@ html
     = render 'layouts/nav'
     = render 'layouts/flash_message'
     .container.admin-container
-      .pull-left.admin-sidebar
-        .list-group
-          = link_to "专家管理", admin_users_path, class: "list-group-item #{"active" if params[:controller] == 'admin/users'}"
+      = render 'layouts/admin_sidebar'
 
       .pull-right.admin-main
         = yield

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   load_and_authorize_resource :user, only: [:update]
 
   def experts
-    @users = User.experts.includes(:expert_profile).paginate(page: params[:page])
+    @users = User.experts.includes(:expert_profile).paginate(page: params[:page], per_page: 12)
   end
 
   def show
