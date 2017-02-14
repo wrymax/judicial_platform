@@ -30,6 +30,7 @@ zh-CN:
         title: 标题
         content: 内容
         keyword_list: 鉴定领域
+        status: 工作进展状态
       judicial_case:
         name: 标题
         content: 内容
@@ -97,7 +98,7 @@ zh-CN:
     need:
       status:
         pending: 待处理
-        processing: 正在处理
+        processing: 正在沟通处理
         working: 鉴定工作中
         complete: 鉴定完成
         canceled: 已取消

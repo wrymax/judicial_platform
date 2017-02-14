@@ -1,0 +1,12 @@
+.admin-header
+  h4.admin-title
+    | 编辑需求工作进展
+  .admin-title-btn
+    = link_to "返回", "javascript: history.go(-1)", class: 'btn btn-default btn-outline'
+  .clear
+
+.white-board.padding
+  = simple_form_for ['admin', @need], validate: true do |f|
+    = f.input :status, as: :radio_buttons, collection: I18n.t('custom.need.status').invert
+
+    = f.submit "更新工作进展", class: 'btn btn-outline btn-primary'

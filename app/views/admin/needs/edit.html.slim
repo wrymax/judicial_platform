@@ -1,0 +1,9 @@
+.admin-header
+  h4.admin-title
+    | 编辑需求信息
+  .admin-title-btn
+    = link_to "返回", "javascript: history.go(-1)", class: 'btn btn-default btn-outline'
+  .clear
+
+.white-board.padding
+  = render 'form'

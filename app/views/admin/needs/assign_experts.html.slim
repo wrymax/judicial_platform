@@ -1,0 +1,9 @@
+.container.main-container
+  .white-board.padding
+    h4
+      | 指派负责专家
+    hr
+
+    = simple_form_for [:assign_experts, :admin, @need], validate: true, method: :post do |f|
+      = f.input :experts, as: :select, multiple: true, collection: @experts, input_html: { class: 'select2-ajax', data: { url: '/users/experts.json' }, name: "need[experts][]" }, include_blank: false
+      = f.submit "指派负责专家", class: 'btn btn-primary btn-outline'

@@ -60,6 +60,7 @@ GEM
     acts-as-taggable-on (4.0.0)
       activerecord (>= 4.0)
     arel (7.1.4)
+    awesome_print (1.6.1)
     bcrypt (3.1.11)
     builder (3.2.3)
     byebug (9.0.6)
@@ -128,6 +129,8 @@ GEM
     pry-byebug (3.4.2)
       byebug (~> 9.0)
       pry (~> 0.10)
+    pry-rails (0.3.4)
+      pry (>= 0.9.10)
     puma (3.7.0)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -223,6 +226,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 4.0)
+  awesome_print
   byebug
   cancancan
   client_side_validations!
@@ -235,6 +239,7 @@ DEPENDENCIES
   paperclip (~> 5.0.0)
   pry
   pry-byebug
+  pry-rails
   puma (~> 3.0)
   rails
   sass-rails (~> 5.0)

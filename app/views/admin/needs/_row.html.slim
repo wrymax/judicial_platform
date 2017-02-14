@@ -1,0 +1,12 @@
+tr
+  td.info-td
+    h4.name
+      = link_to need.title, admin_need_path(need)
+    .pitch
+      = need.content.truncate(100)
+
+    .tags
+      = render partial: 'tags/tag_block', collection: need.keywords, as: :tag
+
+  td.edit-td
+    = bootstrap_icon_link_to path: edit_admin_need_path(need), icon_class: 'edit', text: "编辑"

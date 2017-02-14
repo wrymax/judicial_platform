@@ -16,4 +16,4 @@ tr
       = render partial: 'tags/tag_block', collection: user.keywords, as: :tag
 
   td.edit-td
-    = link_to "编辑", edit_admin_user_path(user)
+    = bootstrap_icon_link_to path: edit_admin_user_path(user), icon_class: 'edit', text: "编辑"

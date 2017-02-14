@@ -30,6 +30,8 @@ a {
 .main-container {
   margin: 20px auto;
 }
+
+/* header and footer */
 .header-nav {
   border-radius: 0;
   margin-bottom: 0;
@@ -63,6 +65,20 @@ a {
   color: #ccc;
   padding: 20px 0;
 }
+
+/* pagination */
 .page-wrapper {
   text-align: center;
+  .no-more {
+    padding: 10px 0;
+  }
+}
+
+/* buttons and glyphicon */
+.glyphicon:before {
+  font-size: 11px;
+  margin-right: 2px;
+}
+.glyphicon.btn {
+  line-height: 18px;
 }

@@ -1,0 +1,51 @@
+.white-board.padding
+  h4.title
+    = @need.title
+  hr
+  // 管理需求按钮group
+  = render 'manage_btns', need: @need
+  hr
+  .panel.panel-default
+    .panel-heading
+      | 需求状态: 
+      = @need.i18n_status
+    table.table.table-bordered.need-status-table
+      tbody
+        tr
+          td.first-td
+            span class="glyphicon glyphicon-file"
+            | 需求方信息
+          td
+            = @demander.name
+          td
+            = @demander.email || "暂无Email信息"
+          td
+            = @demander.phone || "暂无手机号"
+
+        tr
+          td.first-td rowspan=(@experts.count.zero? ? 1 : @experts.count)
+            span class="glyphicon glyphicon-user"
+            | 负责专家
+          - if @experts.present?
+            td.no-padding colspan=3
+              table.table.table-bordered
+                - @experts.each do |expert|
+                  tr
+                    td
+                      = link_to user_path(expert), target: '_blank' do
+                        = image_tag expert.avatar(:thumb), class: 'avatar', style: 'width: 35px; border-radius: 35px; margin-right: 5px;'
+                        = expert.name
+                    td
+                      = expert.email || "暂无Email信息"
+                    td
+                      = expert.phone || "暂无手机号"
+
+          - else
+            td colspan=3
+              | 等待分配
+
+  hr
+  .content
+    h5
+      | 需求简介: 
+    = simple_format @need.content

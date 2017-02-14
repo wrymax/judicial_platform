@@ -24,5 +24,12 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users
     resources :judicial_cases
+    resources :needs do
+      member do
+        get :edit_status
+        get :assign_experts
+        post :assign_experts
+      end
+    end
   end
 end

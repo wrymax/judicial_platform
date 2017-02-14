@@ -1,0 +1,13 @@
+.white-board
+  .admin-header
+    h4.admin-title
+      | 需求管理
+    .admin-title-btn
+      = link_to "添加需求", new_admin_need_path, class: 'btn btn-primary btn-outline'
+    .clear
+
+  table.table.admin-table.needs-table#needs
+    = render partial: 'admin/needs/row', collection: @needs, as: :need
+    .clear
+
+  = paginations @needs

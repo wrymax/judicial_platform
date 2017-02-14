@@ -1,13 +1,13 @@
-h4.admin-title
-  | 专家管理
-.admin-title-btn
-  = link_to "添加专家", new_admin_user_path, class: 'btn btn-primary btn-outline'
-.clear
-
 .white-board
-  table.table.users-table#experts
+  .admin-header
+    h4.admin-title
+      | 专家管理
+    .admin-title-btn
+      = link_to "添加专家", new_admin_user_path, class: 'btn btn-primary btn-outline'
+    .clear
+
+  table.table.admin-table#experts
     = render partial: 'admin/users/row', collection: @experts, as: :user
     .clear
 
-  .pagination
-    = will_paginate @experts, renderer: BootstrapPagination::Rails
+  = paginations @experts

@@ -1,0 +1,19 @@
+table.need-status-table {
+  td {
+    width: 25%;
+    &.no-padding {
+      padding: 0 !important;
+    }
+  }
+  table {
+    margin: 0;
+    border: 0;
+    td {
+      width: 33.3333%;
+    }
+    tr:first-child td {
+      border-top: 0;
+    }
+  }
+
+}

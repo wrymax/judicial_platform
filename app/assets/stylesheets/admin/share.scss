@@ -14,3 +14,41 @@
 .admin-title-btn {
   float: right;
 }
+.admin-header {
+  padding: 12px 10px;
+  h4 {
+    margin: 6px 0;
+  }
+}
+table.admin-table {
+  margin-bottom: 0;
+  tr {
+    &:last-child {
+      border-bottom: 1px solid #DDD;
+    }
+    td {
+      padding: 10px 12px !important;
+    }
+    .avatar-td {
+      width: 15%;
+      .avatar {
+        img {
+          width: 100%;
+          border-radius: 100px;
+        }
+      }
+    }
+    .info-td {
+      font-size: 13px;
+      color: #666;
+      .tag {
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+    .edit-td {
+      width: 15%;
+    }
+  }
+}

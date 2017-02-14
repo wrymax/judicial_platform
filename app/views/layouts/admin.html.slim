@@ -18,7 +18,4 @@ html
         = yield
       .clear
     = render 'layouts/footer'
-    javascript:
-      $(function(){
-        $('select.select2').select2();
-      })
+    = render 'layouts/bind_select2'
