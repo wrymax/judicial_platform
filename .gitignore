@@ -22,3 +22,4 @@
 *.swp
 *.swo
 public/system/*
+config/database.yml
