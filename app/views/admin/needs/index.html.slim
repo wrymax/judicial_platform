@@ -7,6 +7,14 @@
     .clear
 
   table.table.admin-table.needs-table#needs
+    thead
+      tr
+        td
+          | 简介
+        td
+          | 状态
+        td
+          | 操作
     = render partial: 'admin/needs/row', collection: @needs, as: :need
     .clear
 

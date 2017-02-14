@@ -7,6 +7,8 @@ tr
 
     .tags
       = render partial: 'tags/tag_block', collection: need.keywords, as: :tag
+  td.status-td
+    = need.i18n_status
 
   td.edit-td
     = bootstrap_icon_link_to path: edit_admin_need_path(need), icon_class: 'edit', text: "编辑"

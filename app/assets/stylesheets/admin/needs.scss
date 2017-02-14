@@ -15,5 +15,12 @@ table.need-status-table {
       border-top: 0;
     }
   }
-
+}
+table.needs-table {
+  // border-top: 1px solid #DDD;
+  border-left: 0;
+  border-right: 0;
+  td.status-td {
+    width: 10%;
+  }
 }

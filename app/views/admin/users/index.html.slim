@@ -7,6 +7,13 @@
     .clear
 
   table.table.admin-table#experts
+    thead
+      tr
+        td
+          | 简介
+        td
+          | 操作
+
     = render partial: 'admin/users/row', collection: @experts, as: :user
     .clear
 

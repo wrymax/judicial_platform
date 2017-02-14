@@ -9,5 +9,4 @@ tr
       = render partial: 'tags/tag_block', collection: judicial_case.keywords, as: :tag
 
   td.edit-td
-    = link_to "编辑", edit_admin_judicial_case_path(judicial_case)
-
+    = bootstrap_icon_link_to path: edit_admin_judicial_case_path(judicial_case), icon_class: 'edit', text: "编辑"

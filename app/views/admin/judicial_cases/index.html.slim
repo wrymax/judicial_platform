@@ -7,6 +7,12 @@
     .clear
 
   table.table.admin-table.judicial-cases-table#judicial_cases
+    thead
+      tr
+        td
+          | 简介
+        td
+          | 操作
     = render partial: 'admin/judicial_cases/row', collection: @judicial_cases, as: :judicial_case
     .clear
   
