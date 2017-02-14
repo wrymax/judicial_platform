@@ -14,6 +14,12 @@
         tr
           td.first-td
             span class="glyphicon glyphicon-file"
+            | 鉴定领域
+          td colspan=3
+            = render partial: 'tags/tag_block', collection: @need.keywords, as: :tag
+        tr
+          td.first-td
+            span class="glyphicon glyphicon-file"
             | 需求方信息
           td
             = @demander.name
