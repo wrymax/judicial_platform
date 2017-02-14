@@ -7,6 +7,9 @@
 
 .white-board.padding
   = simple_form_for ['admin', @need], validate: true do |f|
-    = f.input :status, as: :radio_buttons, collection: I18n.t('custom.need.status').invert
+    | 当前状态: 
+    = @need.i18n_status
+    hr
+    = f.input :status, as: :radio_buttons, collection: @need.feasible_status
 
     = f.submit "更新工作进展", class: 'btn btn-outline btn-primary'

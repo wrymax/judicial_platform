@@ -6,10 +6,11 @@ class UsersController < ApplicationController
     @users = User.experts.includes(:expert_profile).paginate(page: params[:page], per_page: 12)
 
     if request.format.json?
-      ret = User.where("name like ?", "%#{params[:q]}%").map do |user|
+      ret = User.experts.where("name like ?", "%#{params[:q]}%").map do |user|
         {
           id: user.id, 
-          text: user.name
+          text: user.name + ' - ' + user.pitch
+          # name: user.name
         }
       end
       render json: ret
