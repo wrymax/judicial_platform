@@ -1,0 +1,6 @@
+li.dynamic-row
+  = link_to news_path(news), target: '_blank' do
+    = "[#{news.created_at.to_date}]"
+    |  
+    = news.title
+

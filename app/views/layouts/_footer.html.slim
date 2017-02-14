@@ -1,4 +1,58 @@
 footer.footer
   .container
-    | TODO: 
-    | 新闻动态、友情链接、关于我们、常见问题、相关法律文档
+    .work-dynamics.footer-section-list.pull-left
+      h4
+        | 工作动态
+      ul.work-dynamic-list.footer-ul
+        = render partial: 'work_dynamics/row', collection: WorkDynamic.latest.paginate(page: 1, per_page: 5), as: :work_dynamic
+
+    .news.footer-section-list.pull-left
+      h4
+        | 新闻资讯
+      ul.news-list.footer-ul
+        = render partial: 'news/row', collection: News.latest.paginate(page: 1, per_page: 5), as: :news
+
+    .footer-section-vertical.pull-right
+      .title
+        | 司法鉴定须知
+      ul
+        li
+          = link_to "司法鉴定程序", "#"
+        li
+          = link_to "委托鉴定指南", "#"
+        li
+          = link_to "鉴定风险告知", "#"
+        li
+          = link_to "鉴定意见解说", "#"
+        li
+          = link_to "鉴定投诉指南", "#"
+
+    .footer-section-vertical.pull-right
+      .title
+        | 支持与帮助
+      ul
+        li
+          = link_to "法律法规", "#"
+        li
+          = link_to "联系我们", "#"
+        li
+          = link_to "留言反馈", "#"
+        li
+          = link_to "关于我们", "#"
+        li
+          = link_to "中心地址", "#"
+
+    .clear
+  .friend-links.text-center
+    span.title
+      | 友情链接
+
+    = link_to "中南财经政法大学", "http://www.zuel.edu.cn/", target: '_blank', nofollow: true
+    = link_to "武汉大学", "http://www.whu.edu.cn/", target: '_blank', nofollow: true
+    = link_to "华中科技大学", "http://www.hust.edu.cn/", target: '_blank', nofollow: true
+    = link_to "湖北省司法厅", "http://www.hbsf.gov.cn/", target: '_blank', nofollow: true
+    = link_to "湖北省公安厅", "http://www.hbgat.gov.cn/", target: '_blank', nofollow: true
+    = link_to "公安大学", "http://www.cppsu.edu.cn/", target: '_blank', nofollow: true
+
+  .beian.text-center.f12
+    | Copyright (C) 2010-2018 All Rights Reserved 湖北科技事务司法鉴定中心

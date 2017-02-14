@@ -1,6 +1,6 @@
 // share styles
 body {
-  font-family: PingFang SC,Lantinghei SC,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,STHeitiSC-Light,simsun,\\5B8B\4F53,WenQuanYi Zen Hei,WenQuanYi Micro Hei,"sans-serif";
+  font-family: Microsoft YaHei Light,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial Narrow,Arial,"sans-serif"!important;
   background: #f6f6f6;
   color: #666;
 }
@@ -37,6 +37,15 @@ a {
   margin-bottom: 0;
   border: 0;
   background-color: white;
+  border-bottom: 1px solid #EEE;
+  .navbar-nav {
+    li.active {
+      background-color: #EEE;
+    }
+    a {
+      padding: 22px 20px;
+    }
+  }
   .nav {
     li {
       a {
@@ -45,10 +54,14 @@ a {
     }
   }
   .nav-avatar {
+    display: block;
+    float: right;
+    margin-left: 10px;
     img {
       margin-top: 6px;
-      height: 40px;
-      width: 40px;
+      height: 52px;
+      width: 52px;
+      border-radius: 100px;
     }
   }
   .login-link {
@@ -57,13 +70,8 @@ a {
   }
 }
 .nav-logo {
-  height: 50px;
+  height: 64px;
   margin-right: 20px;
-}
-.footer {
-  background-color: #333;
-  color: #ccc;
-  padding: 20px 0;
 }
 
 /* pagination */
@@ -75,7 +83,7 @@ a {
 }
 
 /* buttons and glyphicon */
-.glyphicon:before {
+a.glyphicon:before {
   font-size: 11px;
   margin-right: 2px;
 }

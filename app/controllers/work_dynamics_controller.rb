@@ -1,0 +1,2 @@
+class WorkDynamicsController < ApplicationController
+end

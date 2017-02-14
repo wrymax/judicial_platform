@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   resources :needs
   resources :first_level_tags
+  resources :work_dynamics
+  resources :news
 
   # 管理员
   namespace :admin do

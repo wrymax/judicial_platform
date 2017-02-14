@@ -5,11 +5,11 @@ nav.navbar.header-nav
          = link_to '/' do
            img src="/images/home/logo.jpg" class='pull-left nav-logo'
          ul class="nav navbar-nav"
-           li
+           li class=("active" if params[:action] == 'experts')
              = link_to "鉴定专家", experts_users_path
-           li
+           li class=("active" if params[:controller] == 'judicial_cases')
              = link_to "典型案例", judicial_cases_path
-           li
+           li class=("active" if params[:controller] == 'tags')
              = link_to "鉴定领域", first_level_tags_path
          .pull-right
            - if current_user

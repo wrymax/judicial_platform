@@ -1,0 +1,5 @@
+li.dynamic-row
+  = link_to work_dynamic_path(work_dynamic), target: '_blank' do
+    = "[#{work_dynamic.created_at.to_date}]"
+    |  
+    = work_dynamic.title
