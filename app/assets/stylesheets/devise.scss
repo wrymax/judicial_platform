@@ -1,0 +1,28 @@
+.sign-in-form {
+  margin: 50px auto;
+  &.container {
+    width: 600px;
+  }
+  .forms {
+    width: 350px;
+    margin: 10px auto;
+    .btn-submit {
+      width: 120px;
+      margin-top: 10px;
+    }
+  }
+  .title {
+    width: 300px;
+    margin: 10px auto;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #DDD;
+  }
+  .more-links {
+    a {
+      margin: 0 8px;
+      font-size: 12px;
+      color: #666;
+    }
+  }
+}

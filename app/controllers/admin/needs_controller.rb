@@ -1,5 +1,5 @@
 class Admin::NeedsController < Admin::ApplicationController
-  before_filter :find_need, only: [:show, :edit, :edit_status, :update, :cancel, :assign_experts]
+  before_filter :find_need, only: [:show, :edit, :edit_status, :update, :cancel, :assign_experts, :edit_notes]
 
   def index
     @needs = Need.latest.paginate(page: params[:page], per_page: 10)
@@ -15,6 +15,10 @@ class Admin::NeedsController < Admin::ApplicationController
 
   # 编辑工作进展
   def edit_status
+  end
+
+  # 编辑备忘录
+  def edit_notes
   end
 
   # 指派负责专家

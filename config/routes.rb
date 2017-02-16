@@ -31,6 +31,7 @@ Rails.application.routes.draw do
         get :edit_status
         get :assign_experts
         post :assign_experts
+        get :edit_notes
       end
     end
   end

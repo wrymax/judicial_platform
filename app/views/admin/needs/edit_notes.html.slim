@@ -1,0 +1,12 @@
+.admin-header
+  h4.admin-title
+    | 编辑需求信息
+  .admin-title-btn
+    = link_to "返回", "javascript: history.go(-1)", class: 'btn btn-default btn-outline'
+  .clear
+
+.white-board.padding
+  = simple_form_for ['admin', @need], validate: true do |f|
+    = f.input :notes, validate: true, required: true, input_html: { rows: 15 }
+
+    = f.submit "更新工作备忘录", class: 'btn btn-outline btn-primary'

@@ -32,6 +32,7 @@ zh-CN:
         keyword_list: 鉴定领域
         status: '更改工作进展为:'
         experts: 选择负责专家
+        notes: 工作备忘录
       judicial_case:
         name: 标题
         content: 内容
