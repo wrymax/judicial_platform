@@ -1,17 +1,19 @@
 .container.sign-in-form
   .white-board.padding
-    h3.text-center.title
+    /h3.text-center.title
       | 注册新用户
 
     .forms
       = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         /= devise_error_messages!
         = f.input :email, required: true, validate: true
+        = f.input :phone, required: true, validate: true
+        = f.input :name, required: true, validate: true
         = f.input :password, required: true, validate: true
         = f.input :password_confirmation, required: true, validate: true
 
         .text-center
-          = f.submit "注册新用户", class: 'btn btn-primary btn-outline'
+          = f.submit "注册新用户", class: 'btn btn-info btn-outline btn-submit'
 
     .text-center.more-links
       = render "users/shared/links"

@@ -1,7 +1,7 @@
 .container.sign-in-form
   .white-board.padding
-    h3.text-center.title
-      | 欢迎来到科技司法鉴定平台
+    /h3.text-center.title
+      | 登录账号
     .forms
       = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         = f.input :email, required: true, validate: true
@@ -10,7 +10,7 @@
         /- if devise_mapping.rememberable?
           = f.input :remember_me, as: :check_boxes
         .text-center
-          = f.submit "登录", class: 'btn btn-primary btn-outline btn-submit'
+          = f.submit "登录账号", class: 'btn btn-info btn-outline btn-submit'
 
     .text-center.more-links
       = render "users/shared/links"
