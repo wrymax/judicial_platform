@@ -1,0 +1,19 @@
+.white-board
+  .admin-header
+    h4.admin-title
+      | 新闻管理
+    .admin-title-btn
+      = link_to "添加新闻", new_admin_news_path, class: 'btn btn-primary btn-outline'
+    .clear
+
+  table.table.admin-table.needs-table#news
+    thead
+      tr
+        td
+          | 简介
+        td
+          | 操作
+    = render partial: 'admin/news/row', collection: @news, as: :news
+    .clear
+
+  = paginations @news

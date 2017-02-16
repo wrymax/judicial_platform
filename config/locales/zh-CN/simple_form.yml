@@ -37,6 +37,13 @@ zh-CN:
         name: 标题
         content: 内容
         keyword_list: 鉴定领域
+      news:
+        title: 标题
+        content: 内容
+      work_dynamic:
+        title: 标题
+        content: 内容
+
     # hints:
     #   defaults:
     #     username: 'User name to sign in.'

@@ -34,5 +34,7 @@ Rails.application.routes.draw do
         get :edit_notes
       end
     end
+    resources :news
+    resources :work_dynamics
   end
 end

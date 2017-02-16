@@ -7,7 +7,7 @@
     = simple_form_for Need.new, validate: true do |f|
       = f.input :title
       //= f.input :keyword_list
-      = f.input :keyword_list, as: :select, multiple: true, collection: Tag.keyword_list, validate: true, required: true, input_html: { class: 'select2' }
+      = f.input :keyword_list, as: :select, include_blank: false, multiple: true, collection: Tag.keyword_list, validate: true, input_html: { class: 'select2' }
       = f.input :content, input_html: { rows: 15 }
 
       = f.submit "提交需求", class: 'btn btn-primary btn-outline'
