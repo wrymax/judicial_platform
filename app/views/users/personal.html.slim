@@ -3,10 +3,12 @@
 
   .pull-right.dashboard-main.white-board.padding
     = simple_form_for current_user do |f|
+      // TODO: 解决文件上传的bug（可能由于form的参数不支持）
       = f.input :avatar
       = f.input :name
       = f.input :pitch
-      = f.input :keyword_list
+      = f.input :keyword_list, as: :select, multiple: true, collection: current_user.keywords, input_html: { data: { url: '/tags/keywords.json' }, class: 'select2-ajax', name: 'user[keyword_list][]' }, include_blank: false
+
       - if current_user.expert?
         = f.simple_fields_for current_user.expert_profile do |p|
           = p.input :license_no

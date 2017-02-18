@@ -21,6 +21,12 @@ Rails.application.routes.draw do
   resources :first_level_tags
   resources :work_dynamics
   resources :news
+  resources :feedbacks
+  resources :tags do
+    collection do
+      get :keywords
+    end
+  end
 
   # 管理员
   namespace :admin do
@@ -36,5 +42,6 @@ Rails.application.routes.draw do
     end
     resources :news
     resources :work_dynamics
+    resources :feedbacks
   end
 end

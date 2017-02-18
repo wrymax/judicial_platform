@@ -1,0 +1,20 @@
+.white-board
+  .admin-header
+    h4.admin-title
+      | 留言反馈管理
+    .clear
+
+  table.table.admin-table.needs-table#needs
+    thead
+      tr
+        td
+          | 内容
+        td
+          | 联系方式
+        td
+          | 操作
+    = render partial: 'admin/feedbacks/row', collection: @feedbacks, as: :feedback
+    .clear
+
+  = paginations @feedbacks
+

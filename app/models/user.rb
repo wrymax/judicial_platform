@@ -72,6 +72,13 @@ class User < ApplicationRecord
     User.experts.tagged_with(self.keyword_list, on: :keywords, any: true).where('id != ?', self.id)
   end
 
+  # 为select2插件定制的数据结构
+  def keywords_for_select2
+    keywords.map do |keyword|
+      { id: keyword.name, name: keyword.name }
+    end
+  end
+
   ### For paperclip cropper
   attr_accessor :crop_h, :crop_w, :crop_x, :crop_y
 

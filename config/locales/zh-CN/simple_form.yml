@@ -43,6 +43,11 @@ zh-CN:
       work_dynamic:
         title: 标题
         content: 内容
+      feedback:
+        name: 您的姓名
+        phone: 您的电话(我们会严格保密，仅用于与您联系)
+        email: 您的Email(我们会严格保密，仅用于与您联系)
+        content: 您的意见和反馈
 
     # hints:
     #   defaults:
@@ -94,6 +99,10 @@ zh-CN:
               blank: 需求标题不能为空
             content:
               blank: 需求内容不能为空
+        feedback:
+          attributes:
+            email:
+              blank: 请提供您的常用电子邮件，方便我们与您联系
 
       messages:
         not_saved: 数据存储失败 
