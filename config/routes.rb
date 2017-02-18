@@ -28,6 +28,20 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :helps, only: [] do
+    collection do
+      get :about_us
+      get :laws
+      get :contact_us
+      get :address
+      get :procedures
+      get :guidelines
+      get :risks
+      get :explanations
+      get :complain
+    end
+  end
+
   # 管理员
   namespace :admin do
     resources :users

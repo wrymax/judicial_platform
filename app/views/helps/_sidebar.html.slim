@@ -1,0 +1,19 @@
+.pull-left.admin-sidebar
+  h5
+    span class="glyphicon glyphicon-envelope"
+    |  支持与帮助
+  .list-group
+    = link_to "法律法规", laws_helps_path, class: "list-group-item #{"active" if params[:action] == 'laws'}"
+    = link_to "关于我们", about_us_helps_path, class: "list-group-item #{"active" if params[:action] == 'about_us'}"
+    = link_to "联系我们", contact_us_helps_path, class: "list-group-item #{"active" if params[:action] == 'contact_us'}"
+    = link_to "中心地址", address_helps_path, class: "list-group-item #{"active" if params[:action] == 'address'}"
+
+  h5
+    span class="glyphicon glyphicon-th"
+    |  司法鉴定须知
+  .list-group
+    = link_to "司法鉴定程序", procedures_helps_path, class: "list-group-item #{"active" if params[:action] == 'procedures'}"
+    = link_to "委托鉴定指南", guidelines_helps_path, class: "list-group-item #{"active" if params[:action] == 'guidelines'}"
+    = link_to "鉴定风险告知", risks_helps_path, class: "list-group-item #{"active" if params[:action] == 'risks'}"
+    = link_to "鉴定意见解说", explanations_helps_path, class: "list-group-item #{"active" if params[:action] == 'explanations'}"
+    = link_to "鉴定投诉指南", complain_helps_path, class: "list-group-item #{"active" if params[:action] == 'complain'}"

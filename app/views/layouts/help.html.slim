@@ -1,0 +1,21 @@
+doctype html
+
+html
+  head
+    = csrf_meta_tags
+    title
+      | 湖北科技事务司法鉴定中心
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+
+  body
+    = render 'layouts/nav'
+    = render 'layouts/flash_message'
+    .container.admin-container
+      = render 'helps/sidebar'
+
+      .pull-right.admin-main
+        = yield
+      .clear
+    = render 'layouts/footer'
+    /= render 'layouts/bind_select2'
