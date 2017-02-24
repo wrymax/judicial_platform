@@ -52,6 +52,7 @@ class Admin::NeedsController < Admin::ApplicationController
   end
 
   def need_params
+    handle_keywords_params(:need)
     params[:need].permit!
   end
 end

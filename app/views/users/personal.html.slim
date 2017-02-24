@@ -2,16 +2,15 @@
   = render 'users/dashboard_sidebar'
 
   .pull-right.dashboard-main.white-board.padding
-    = simple_form_for current_user do |f|
-      // TODO: 解决文件上传的bug（可能由于form的参数不支持）
-      = f.input :avatar
-      = f.input :name
-      = f.input :pitch
+    = simple_form_for current_user, validate: true, html: { multipart: true } do |f|
+      = f.input :avatar, validate: true, required: true
+      = f.input :name, validate: true, required: true
+      = f.input :pitch, validate: true, required: true
       = f.input :keyword_list, as: :select, multiple: true, collection: current_user.keywords, input_html: { data: { url: '/tags/keywords.json' }, class: 'select2-ajax', name: 'user[keyword_list][]' }, include_blank: false
 
       - if current_user.expert?
         = f.simple_fields_for current_user.expert_profile do |p|
-          = p.input :license_no
-      = f.input :resume, input_html: { rows: 15 }
+          = p.input :license_no, validate: true, required: true
+      = f.input :resume, input_html: { rows: 15 }, validate: true, required: true
 
       = f.submit "更新个人信息", class: 'btn btn-outline btn-primary'

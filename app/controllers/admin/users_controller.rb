@@ -42,6 +42,7 @@ class Admin::UsersController < Admin::ApplicationController
   
   def user_params
     params[:expert_profile] = params[:user].delete(:expert_profile)
+    handle_keywords_params
     params[:user].merge({user_type: 'expert'}).permit!
   end
 
@@ -49,9 +50,4 @@ class Admin::UsersController < Admin::ApplicationController
     params[:expert_profile].permit!
   end
 
-  def validate_all_fields(user)
-    %w(name phone pitch resume keyword_list).each do |column|
-      user.send("validate_#{column}=", true)
-    end
-  end
 end

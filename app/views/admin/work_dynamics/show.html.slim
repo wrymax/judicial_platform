@@ -1,6 +1,9 @@
 .white-board.padding
-  h4.title
+  h4.title.pull-left
     = @work_dynamic.title
+  .pull-right
+    = bootstrap_icon_link_to path: edit_admin_work_dynamic_path(@work_dynamic), icon_class: 'edit', text: "编辑"
+  .clear
   hr
   .content
     = simple_format @work_dynamic.content

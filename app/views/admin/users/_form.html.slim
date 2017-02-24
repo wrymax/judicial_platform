@@ -1,8 +1,13 @@
-= simple_form_for ['admin', @user], validate: true do |f|
-  = f.input :avatar, validate: true, required: true
+= simple_form_for ['admin', @user], validate: true, html: { multipart: true } do |f|
+  .pull-left
+    = f.input :avatar, validate: true, required: true
+  .pull-left
+    = image_tag @user.avatar(:thumb), class: 'avatar-thumb'
+  .clear
   = f.input :name, validate: true, required: true
   = f.input :pitch, validate: true, required: true
-  = f.input :keyword_list, as: :select, multiple: true, collection: Tag.keyword_list, validate: true, required: true, input_html: { class: 'select2' }
+  = f.input :keyword_list, as: :select, multiple: true, collection: @user.keywords, input_html: { data: { url: '/tags/keywords.json' }, class: 'select2-ajax', name: 'user[keyword_list][]' }, include_blank: false
+
   - if @user.expert?
     = f.simple_fields_for @user.expert_profile, validate: true do |p|
       = p.input :license_no, validate: true, required: true

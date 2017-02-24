@@ -1,8 +1,10 @@
 javascript:
   $(function(){
-    $('select.select2').select2({
-      multiple: true,
-      theme: "bootstrap"
+    $('select.select2').each(function(){
+      $(this).select2({
+        /*multiple: true,*/
+        theme: "bootstrap"
+      })
     });
     $(".select2-ajax").each(function(){
       var that = this;

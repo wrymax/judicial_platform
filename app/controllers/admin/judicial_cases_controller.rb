@@ -47,6 +47,7 @@ class Admin::JudicialCasesController < Admin::ApplicationController
   protected
 
   def judicial_case_params
+    handle_keywords_params(:judicial_case)
     params[:judicial_case].permit!
   end
 end
