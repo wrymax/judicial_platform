@@ -1,0 +1,23 @@
+h1 Listing expert_applications
+
+table
+  thead
+    tr
+      th User
+      th License no
+      th
+      th
+      th
+
+  tbody
+    - @expert_applications.each do |expert_application|
+      tr
+        td = expert_application.user_id
+        td = expert_application.license_no
+        td = link_to 'Show', expert_application
+        td = link_to 'Edit', edit_expert_application_path(expert_application)
+        td = link_to 'Destroy', expert_application, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Expert application', new_expert_application_path

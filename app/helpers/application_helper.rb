@@ -1,7 +1,7 @@
 module ApplicationHelper
   # links with bootstrap icon
   def bootstrap_icon_link_to(options={})
-    link_to options[:text], options[:path], class: "glyphicon glyphicon-#{options[:icon_class]} #{options[:class]}"
+    link_to options[:text], options[:path], class: "glyphicon glyphicon-#{options[:icon_class]} #{options[:class]}", data: { confirm: options[:confirm] }, method: options[:method] || :get
   end
 
   # pagination html for collection

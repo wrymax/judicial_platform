@@ -1,0 +1,23 @@
+- user = expert_application.user
+tr
+  td.avatar-td
+    .avatar
+      = image_tag user.avatar(:thumb)
+  td.info-td
+    h4.name
+      = link_to user.name, user_path(user), target: '_blank'
+    .pitch
+      = user.pitch
+
+    .license-no
+      span
+        | 执业证号: 
+      = expert_application.license_no
+    .resume
+      = user.resume
+
+    .tags
+      = render partial: 'tags/tag_block', collection: user.keywords, as: :tag
+
+  td.edit-td
+    = bootstrap_icon_link_to path: approve_admin_expert_application_path(expert_application), icon_class: 'ok', text: "通过申请", confirm: "确认通过#{user.name}的专家申请吗？", method: :post

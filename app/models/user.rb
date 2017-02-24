@@ -7,6 +7,7 @@ class User < ApplicationRecord
   acts_as_taggable_on :keywords
 
   has_one :expert_profile, dependent: :destroy
+  has_one :expert_application, dependent: :destroy
   has_many :case_experts, dependent: :destroy
   has_many :judicial_cases, through: :case_experts
   has_many :need_experts, dependent: :destroy

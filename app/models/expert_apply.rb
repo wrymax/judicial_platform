@@ -1,2 +1,0 @@
-class ExpertApply < ApplicationRecord
-end

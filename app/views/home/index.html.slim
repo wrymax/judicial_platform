@@ -7,9 +7,9 @@
   .home-buttons.text-center
     - if !current_user || current_user.demander?
       = link_to "我有鉴定需求", new_need_path, class: 'btn btn-info btn-outline'
-      = link_to "申请加入专家", "#", class: 'btn btn-success btn-outline'
+      = link_to "申请加入专家", new_expert_application_path, class: 'btn btn-success btn-outline'
     - elsif current_user.expert?
-      = link_to "查看我的鉴定需求", "#", class: 'btn btn-info btn-outline'
+      = link_to "查看我的鉴定需求", my_needs_users_path, class: 'btn btn-info btn-outline'
 
 .home-section
   .container

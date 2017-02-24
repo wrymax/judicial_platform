@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong User:
+  = @expert_application.user_id
+p
+  strong License no:
+  = @expert_application.license_no
+
+= link_to 'Edit', edit_expert_application_path(@expert_application)
+'|
+= link_to 'Back', expert_applications_path

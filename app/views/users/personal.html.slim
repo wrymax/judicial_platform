@@ -2,6 +2,12 @@
   = render 'users/dashboard_sidebar'
 
   .pull-right.dashboard-main.white-board.padding
+    h4.title.pull-left
+      | 修改个人资料
+    .pull-right
+      = bootstrap_icon_link_to path: user_path(current_user), icon_class: 'user', text: "我的个人主页", class: 'title-rght-link'
+    .clear
+    hr
     = simple_form_for current_user, validate: true, html: { multipart: true } do |f|
       = f.input :avatar, validate: true, required: true
       = f.input :name, validate: true, required: true

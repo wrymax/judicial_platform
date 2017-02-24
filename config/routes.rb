@@ -27,6 +27,7 @@ Rails.application.routes.draw do
       get :keywords
     end
   end
+  resources :expert_applications
 
   resources :helps, only: [] do
     collection do
@@ -57,5 +58,11 @@ Rails.application.routes.draw do
     resources :news
     resources :work_dynamics
     resources :feedbacks
+    resources :expert_applications do
+      member do
+        post :approve
+        post :reject
+      end
+    end
   end
 end

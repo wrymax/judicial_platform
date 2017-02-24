@@ -1,7 +1,14 @@
 .container.main-container
   = render 'users/dashboard_sidebar'
 
-  .pull-right.dashboard-main.white-board
+  .pull-right.dashboard-main.white-board.padding
+    h4.title.pull-left
+      | 我的鉴定需求
+    /.pull-right
+      = link_to "我的个人主页", user_path(current_user), class: 'title-right-link'
+    .clear
+    hr
+
     .needs-list
       - if @needs.present?
         = render partial: 'needs/row', collection: @needs, as: :need

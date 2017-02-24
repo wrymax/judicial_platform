@@ -26,6 +26,8 @@ zh-CN:
         name: 真实姓名
       expert_profile:
         license_no: 执业证号
+      expert_application:
+        license_no: 执业证号
       need:
         title: 标题
         content: 内容
@@ -90,6 +92,10 @@ zh-CN:
             keyword_list:
               blank: 鉴定领域不能为空
         expert_profile:
+          attributes:
+            license_no:
+              blank: 执业证号不能为空
+        expert_application:
           attributes:
             license_no:
               blank: 执业证号不能为空
