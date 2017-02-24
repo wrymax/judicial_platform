@@ -1,4 +1,5 @@
 class ExpertApplicationsController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_expert_application, only: [:show, :edit, :update, :destroy]
   before_action :check_expert_status, only: [:new, :edit]
 
