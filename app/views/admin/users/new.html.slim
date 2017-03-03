@@ -1,5 +1,5 @@
 .white-board.padding
-  = simple_form_for ['admin', @user], validate: true do |f|
+  = simple_form_for ['admin', @user], validate: true, html: { multipart: true } do |f|
     legend
       | 账户信息
     fieldset
@@ -16,7 +16,7 @@
       = f.input :name, required: true, validate: true
       = f.input :pitch, required: true, validate: true
       /= f.input :keyword_list, required: true, validate: true
-      = f.input :keyword_list, as: :select, multiple: true, collection: Tag.keyword_list, validate: true, required: true, input_html: { class: 'select2' }
+      = f.input :keyword_list, as: :select, multiple: true, collection: @user.keywords, input_html: { data: { url: '/tags/keywords.json' }, class: 'select2-ajax', name: 'user[keyword_list][]' }, include_blank: false
       = f.simple_fields_for @expert_profile || ExpertProfile.new, validate: true do |p|
         = p.input :license_no, required: true, validate: true
       = f.input :resume, input_html: { rows: 15 }, required: true, validate: true

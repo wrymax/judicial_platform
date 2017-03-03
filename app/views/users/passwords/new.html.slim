@@ -1,0 +1,13 @@
+.container.sign-in-form
+  .white-board.padding
+    /h3.text-center.title
+      | 找回密码
+    .forms
+      = simple_form_for resource, as: resource_name, url: password_path(resource_name), html: { method: :post } do |f|
+        = f.input :email, autofocus: true, label: "注册账号邮箱"
+
+        .text-center
+          = f.submit "发送找回密码邮件", class: 'btn btn-info btn-outline'
+
+    .text-center.more-links
+      = render "users/shared/links"

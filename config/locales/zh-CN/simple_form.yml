@@ -74,9 +74,11 @@ zh-CN:
             email:
               taken: 该邮箱已被使用
               blank: 邮箱不能为空
+              not_found: 该邮箱不存在
             password:
               blank: 密码不能为空
               confirmation: 两次密码输入不一致，请重新输入
+              too_short: 密码过短，至少输入6个字符
             resume:
               too_long: 个人简介过长，请控制在1 - 3000字
               too_short: 个人简介过短，请控制在1 - 3000字
@@ -117,6 +119,14 @@ zh-CN:
       user:
         signed_out: 账号已安全退出
         signed_in: 您已成功登录账号
+    failure:
+      user:
+        unauthenticated: 请先登录账号
+        invalid: 账号或密码不正确，请重试
+    passwords:
+      user:
+        send_instructions: 找回密码邮件已发送，请登陆邮箱查收
+      
 
   custom:
     need:

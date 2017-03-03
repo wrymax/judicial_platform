@@ -13,8 +13,13 @@ tr
       span
         | 执业证号: 
       = expert_application.license_no
+    .contact
+      | 联系方式：
+      = user.phone
+      span style='margin-left: 5px;'
+      = user.email
     .resume
-      = user.resume
+      = simple_format user.resume
 
     .tags
       = render partial: 'tags/tag_block', collection: user.keywords, as: :tag

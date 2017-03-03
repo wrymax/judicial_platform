@@ -26,6 +26,8 @@ class User < ApplicationRecord
 
   attr_accessor :validate_name, :validate_pitch, :validate_resume, :validate_phone, :validate_keyword_list
 
+  validates :email, uniqueness: true
+  validates :password, presence: true
   validates :name, length: { within: 1..20 }, if: :validate_name?
   validates :phone, length: { within: 1..20 }, if: :validate_phone?
   validates :pitch, length: { within: 1..30 }, if: :validate_pitch?
