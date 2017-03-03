@@ -1,0 +1,17 @@
+.container.show-user
+  .show-user-desc.pull-left.white-board.padding
+    h4
+      = @work_dynamic.title
+    hr
+    .content
+      = simple_format @work_dynamic.content
+
+  .user-sidebar.pull-right
+    .show-user-sidebar.white-board.padding
+      section.section
+        h4.show-user-title
+          | 最新工作动态
+        .content
+          = render partial: 'work_dynamics/sidebar_row', collection: @latest_work_dynamics, as: :work_dynamic
+
+    .clear

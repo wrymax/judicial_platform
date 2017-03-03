@@ -1,0 +1,17 @@
+.container.show-user
+  .show-user-desc.pull-left.white-board.padding
+    h4
+      = @news.title
+    hr
+    .content
+      = simple_format @news.content
+
+  .user-sidebar.pull-right
+    .show-user-sidebar.white-board.padding
+      section.section
+        h4.show-user-title
+          | 最近新闻
+        .content
+          = render partial: 'news/sidebar_row', collection: @latest_news, as: :news
+
+    .clear

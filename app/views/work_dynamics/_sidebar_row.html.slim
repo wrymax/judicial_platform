@@ -1,0 +1,5 @@
+.small-case-block
+  .name
+    = link_to work_dynamic.title, work_dynamic_path(work_dynamic)
+  .pitch
+    = work_dynamic.content.truncate(30)

@@ -1,0 +1,6 @@
+.small-case-block
+  .name
+    = link_to news.title, news_path(news)
+  .pitch
+    = news.content.truncate(30)
+
