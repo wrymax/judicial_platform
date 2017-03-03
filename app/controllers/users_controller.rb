@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 
   # 更新个人信息
   def update
-    if current_user.update!(user_params)
+    if current_user.update(user_params)
       # 更新专家信息
       if current_user.expert?
         current_user.expert_profile.update!(expert_profile_params)
