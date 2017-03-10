@@ -22,8 +22,8 @@ gem 'will_paginate-bootstrap'
 # backend helpers
 gem 'devise'
 gem 'simple_form'
-gem 'client_side_validations'#, github: 'DavyJonesLocker/client_side_validations', branch: 'rails5'
-gem 'client_side_validations-simple_form'#, github: 'DavyJonesLocker/client_side_validations-simple_form', branch: 'rails5'
+# gem 'client_side_validations' , github: 'DavyJonesLocker/client_side_validations', branch: 'rails5'
+# gem 'client_side_validations-simple_form', github: 'DavyJonesLocker/client_side_validations-simple_form', branch: 'rails5'
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'will_paginate', '~> 3.1.0'
 gem "paperclip", "~> 5.0.0"
