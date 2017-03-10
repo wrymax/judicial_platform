@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'https://ruby.taobao.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -37,7 +37,6 @@ gem 'cancancan'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -46,6 +45,9 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'awesome_print'
+  gem 'capistrano-rails', group: :development
+  gem 'capistrano-rvm', group: :development
+  gem 'capistrano-passenger', group: :development
 end
 
 group :development do
