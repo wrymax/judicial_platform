@@ -28,8 +28,8 @@ class User < ApplicationRecord
 
   validates :email, uniqueness: true
   # validates :password, presence: true
-  validates :name, length: { within: 1..20 }, presence: true
-  validates :phone, length: { within: 1..20 }, presence: true
+  validates :name, length: { within: 1..20 }, if: :validate_name?
+  validates :phone, length: { within: 1..20 }, if: :validate_phone?
   validates :pitch, length: { within: 1..30 }, if: :validate_pitch?
   validates :resume, length: { within: 1..3000 }, if: :validate_resume?
   validates :keyword_list, presence: true, if: :validate_keyword_list?
