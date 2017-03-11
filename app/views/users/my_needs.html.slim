@@ -14,5 +14,6 @@
       - if @needs.present?
         = render partial: 'needs/row', collection: @needs, as: :need
       - else
-        | 暂无鉴定需求
+        .padding
+          | 暂无鉴定需求
 

@@ -3,9 +3,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
 # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    build_resource({})
+    validate_all_fields(resource)
+    yield resource if block_given?
+    respond_with resource
+  end
 
   # POST /resource
   # def create
@@ -57,4 +60,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+
+  private
+
+  def validate_all_fields(user)
+    %w(name phone pitch resume keyword_list).each do |column|
+      user.send("validate_#{column}=", true)
+    end
+  end
 end

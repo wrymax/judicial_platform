@@ -75,6 +75,7 @@ zh-CN:
               taken: 该邮箱已被使用
               blank: 邮箱不能为空
               not_found: 该邮箱不存在
+              invalid: 邮箱格式不正确
             password:
               blank: 密码不能为空
               confirmation: 两次密码输入不一致，请重新输入
@@ -118,6 +119,7 @@ zh-CN:
     sessions:
       user:
         signed_out: 账号已安全退出
+        already_signed_out: 账号已安全退出
         signed_in: 您已成功登录账号
     failure:
       user:

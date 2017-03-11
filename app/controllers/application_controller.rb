@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   def validate_all_fields(user)
     %w(name phone pitch resume keyword_list).each do |column|
@@ -19,6 +20,12 @@ class ApplicationController < ActionController::Base
     else
       params[model][:keyword_list] = []
     end
+  end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :password, :password_confirmation, :phone, :name])
   end
 
 end

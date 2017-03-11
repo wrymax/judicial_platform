@@ -3,9 +3,9 @@
     /h3.text-center.title
       | 登录账号
     .forms
-      = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = simple_form_for(resource, as: resource_name, url: session_path(resource_name), validate: true) do |f|
         = f.input :email, required: true, validate: true
-        = f.input :password, required: true, validate: true
+        = f.input :password, required: true
 
         /- if devise_mapping.rememberable?
           = f.input :remember_me, as: :check_boxes
