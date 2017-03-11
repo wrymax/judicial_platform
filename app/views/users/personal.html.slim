@@ -4,8 +4,9 @@
   .pull-right.dashboard-main.white-board.padding
     h4.title.pull-left
       | 修改个人资料
-    .pull-right
-      = bootstrap_icon_link_to path: user_path(current_user), icon_class: 'user', text: "我的个人主页", class: 'title-rght-link'
+    - if current_user.expert?
+      .pull-right
+        = bootstrap_icon_link_to path: user_path(current_user), icon_class: 'user', text: "我的个人主页", class: 'title-rght-link'
     .clear
     hr
     = simple_form_for current_user, validate: true, html: { multipart: true } do |f|
