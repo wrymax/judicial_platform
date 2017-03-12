@@ -1,3 +1,0 @@
-namespace :tags do
-
-end

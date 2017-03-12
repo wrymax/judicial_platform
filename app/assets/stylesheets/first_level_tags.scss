@@ -2,19 +2,31 @@
   margin-bottom: 20px;
   .first-level-info {
     width: 40%;
-    background-color: rgb(245, 247, 249);
-    border-right: 1px solid #DDD;
     .title {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: bold;
       margin-bottom: 10px;
-      color: #333;
-    }
-    .description {
-      line-height: 22px;
+      color: #666;
     }
   }
-  .tags {
+  .description {
+    line-height: 22px;
+    font-size: 13px;
     width: 59.9%;
+    background-color: rgb(245, 247, 249);
+    border-left: 1px solid #DDD;
+    .sub-title {
+      font-size: 16px;
+      margin-top: 10px;
+      font-weight: bold;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    ol {
+      li {
+        margin: 2px 0;
+      }
+    }
   }
 }

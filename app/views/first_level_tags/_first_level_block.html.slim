@@ -2,10 +2,11 @@
   .first-level-info.pull-left.padding
     .title
       = first_level_tag.name
-    .description
-      = first_level_tag.description
+    .tags
+      = render partial: 'tags/tag_block', collection: first_level_tag.tags, as: :tag
+      .clear
 
-  .tags.pull-right.padding
-    = render partial: 'tags/tag_block', collection: first_level_tag.tags, as: :tag
-    .clear
+  .description.pull-right.padding
+    = simple_format first_level_tag.description
+
   .clear
