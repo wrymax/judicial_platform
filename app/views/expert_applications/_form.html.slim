@@ -11,7 +11,7 @@
     = f.input :resume, validate: true, required: true
 
     = f.simple_fields_for @expert_application do |p|
-      = p.input :license_no, required: true, validate: true
+      = p.input :professional_title, required: true, validate: true
 
   .form-actions
     = f.submit "提交申请", class: 'btn btn-info btn-outline'

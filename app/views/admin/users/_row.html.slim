@@ -17,3 +17,4 @@ tr
 
   td.edit-td
     = bootstrap_icon_link_to path: edit_admin_user_path(user), icon_class: 'edit', text: "编辑"
+    = bootstrap_icon_link_to path: cancel_expert_admin_user_path(user), icon_class: 'remove', class: 'text-danger', text: "取消专家权限", confirm: "确认要取消#{user.name}的专家权限吗？", method: :post

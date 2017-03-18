@@ -10,9 +10,12 @@ tr
       = user.pitch
 
     .license-no
-      span
+      /span
         | 执业证号: 
-      = expert_application.license_no
+      /= expert_application.license_no
+      span
+        | 职称: 
+      = expert_application.professional_title
     .contact
       | 联系方式：
       = user.phone
@@ -26,3 +29,4 @@ tr
 
   td.edit-td
     = bootstrap_icon_link_to path: approve_admin_expert_application_path(expert_application), icon_class: 'ok', text: "通过申请", confirm: "确认通过#{user.name}的专家申请吗？", method: :post
+    = bootstrap_icon_link_to path: reject_admin_expert_application_path(expert_application), icon_class: 'remove', text: "拒绝申请", class: 'text-danger', confirm: "确认拒绝#{user.name}的专家申请吗？", method: :post

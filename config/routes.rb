@@ -46,7 +46,11 @@ Rails.application.routes.draw do
 
   # 管理员
   namespace :admin do
-    resources :users
+    resources :users do
+      member do
+        post :cancel_expert
+      end
+    end
     resources :judicial_cases
     resources :needs do
       member do

@@ -38,6 +38,13 @@ class Admin::UsersController < Admin::ApplicationController
 
   end
 
+  def cancel_expert
+    @user = User.find(params[:id])
+    @user.demander!
+
+    redirect_back fallback_location: admin_users_path, notice: "已取消#{@user.name}的专家权限"
+  end
+
   protected
   
   def user_params

@@ -33,6 +33,16 @@ class Admin::NewsController < Admin::ApplicationController
     end
   end
 
+  def destroy
+    if @news.destroy
+      flash[:notice] = "新闻已删除"
+      redirect_to admin_news_index_path
+    else
+      flash[:alert] = "出错了"
+      redirect_to admin_news_index_path
+    end
+  end
+
   private
 
   def news_params

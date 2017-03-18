@@ -33,6 +33,16 @@ class Admin::WorkDynamicsController < Admin::ApplicationController
     end
   end
 
+  def destroy
+    if @work_dynamic.destroy
+      flash[:notice] = "工作动态已删除"
+      redirect_to admin_work_dynamics_path
+    else
+      flash[:alert] = "出错了"
+      redirect_to admin_work_dynamics_path
+    end
+  end
+
   private
 
   def work_dynamics_params

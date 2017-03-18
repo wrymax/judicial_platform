@@ -10,3 +10,5 @@ tr
 
   td.edit-td
     = bootstrap_icon_link_to path: edit_admin_judicial_case_path(judicial_case), icon_class: 'edit', text: "编辑"
+    br
+    = bootstrap_icon_link_to path: admin_judicial_case_path(judicial_case), icon_class: 'remove', class: 'text-danger', text: "删除", method: :delete, confirm: "确认删除鉴定案例吗？"
