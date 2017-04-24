@@ -1,0 +1,57 @@
+.mobile-page {
+  background: white;
+  .nav-placeholder {
+    height: 50px;
+  }
+  nav {
+    border-bottom: 1px solid #EEE;
+    padding: 8px 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    background: white;
+    .mobile-nav-logo {
+      height: 50px;
+    }
+  }
+  .mobile-section {
+    text-align: center;
+    border-bottom: 1px solid #EEE;
+    padding: 50px 20px;
+    .title {
+      font-size: 26px;
+      margin: 15px auto 40px auto;
+    }
+    .desc {
+      font-size: 13px;
+      margin: 15px auto;
+      line-height: 24px;
+    }
+    .college-logo {
+      margin: 5px 10px;
+      width: 60px;
+    }
+  }
+  .mobile-footer {
+    .mobile-beian {
+      text-align: center;
+      border-top: 1px solid #EEE;
+      padding: 10px 0;
+      font-size: 12px;
+      color: #999;
+    }
+    .info {
+      padding: 20px;
+      .title {
+        font-size: 14px;
+        margin: 15px 0;
+        border-left: 3px solid #999;
+        padding-left: 5px;
+      }
+      .desc {
+        font-size: 12px;
+        line-height: 22px;
+      }
+    }
+  }
+}

@@ -70,4 +70,9 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  namespace :mobile do
+    resources :home, only: [:index] do
+    end
+  end
 end
