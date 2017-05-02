@@ -1,49 +1,48 @@
 .home-banner
-  .home-banner-title.text-center
-    | 用科技维权，为科技维权
+  h1.home-banner-title.text-center
+    | 湖北科技事务司法鉴定中心
   .text-center.home-banner-subtitle
-    | 科技 + 法律 => 公正
+    | 科学 · 严谨 · 诚信，为六大领域提供专业的科技司法鉴定服务
 
   .home-buttons.text-center
     - if !current_user || current_user.demander?
-      = link_to "我有鉴定需求", new_need_path, class: 'btn btn-info btn-outline'
-      = link_to "申请加入专家", new_expert_application_path, class: 'btn btn-success btn-outline'
+      = link_to "我有鉴定需求", new_need_path, class: 'btn btn-lg btn-info btn-outline'
+      = link_to "申请加入专家", new_expert_application_path, class: 'btn btn-lg btn-success btn-outline'
     - elsif current_user.expert?
-      = link_to "查看我的鉴定需求", my_needs_users_path, class: 'btn btn-info btn-outline'
+      = link_to "查看我的鉴定需求", my_needs_users_path, class: 'btn btn-lg btn-info btn-outline'
 
 .home-section
-  .container
-    .pull-left.side
-      .title
-        | 丰富鉴定案例
-      .desc
-        p
-          | 数十个成功案例，解决来自商业纠纷、环境污染、农业、电力、化学、知识产权等各专业领域的评估鉴定。
-        p
-          | 灵活组合专家团队，不遗漏任何一个痕迹。
-    .pull-right.side
-      = image_tag "/images/home/wd.jpg", class: 'college-logo'
-      = image_tag "/images/home/hust.jpg", class: 'college-logo'
-      = image_tag "/images/home/zncjzf.jpg", class: 'college-logo'
-      = image_tag "/images/home/hn.jpg", class: 'college-logo'
-    .clear
-
-.home-section.white-section
-  .container
-    .pull-right.side
+  .container.text-center
+    .info
       .title
         | 顶尖专家团队
       .desc
         p
-          | 湖北科技司法鉴定中心的专家团队来自华中科技大学、武汉大学、中南财经政法大学、华中农业大学等十余所国内外顶尖院校的博士生导师、硕士生导师，以及来自各行业协会的资深专家。
+          | 中心囊括国家司法鉴定人24人、特邀专家86人，并建有600余人的各行业专家信息库。
         p
           | 整合业界、学界精英泰斗，打造最权威专业的科技司法鉴定平台。
-    .pull-left.side
-      = image_tag "/images/home/wd.jpg", class: 'college-logo'
-      = image_tag "/images/home/hust.jpg", class: 'college-logo'
-      = image_tag "/images/home/zncjzf.jpg", class: 'college-logo'
-      = image_tag "/images/home/hn.jpg", class: 'college-logo'
-    .clear
+      .logos
+        = image_tag "/images/home/tsing.jpg", class: 'college-logo'
+        = image_tag "/images/home/peking.jpg", class: 'college-logo'
+        = image_tag "/images/home/whu.jpg", class: 'college-logo'
+        = image_tag "/images/home/hust.jpg", class: 'college-logo'
+        = image_tag "/images/home/zncjzf.jpg", class: 'college-logo'
+        = image_tag "/images/home/hn.jpg", class: 'college-logo'
+      .buttons
+        = link_to "了解更多", experts_users_path, class: 'btn btn-lg btn-info btn-outline'
+
+.home-section
+  .container.text-center
+    .info
+      .title
+        | 丰富鉴定案例
+      .desc
+        p
+          | 已接受来自北京、湖北、湖南、黑龙江、江苏、江西、四川、福建、山东、深圳河南、安徽等地人民法院、公安（刑侦及经侦部们）、检察部门、农业执法部门、仲裁机构、律师事务所、大中型企业及中介机构等的委托，在执业范围内开展司法鉴定工作，无一误鉴、错鉴。
+        p
+          | 为司法公正及行政执法提供科学依据，广受好评。
+      .buttons
+        = link_to "了解更多", judicial_cases_path, class: 'btn btn-lg btn-success btn-outline'
 
 .home-section
   .container
@@ -123,4 +122,5 @@
             p
               | 是运用物理学、化学和仪器分析等科学方法，通过对有关物质材料的成分及其结构进行定性、定量分析，对检材的种类、检材和嫌疑样本的同类性和同一性进行鉴定。
           /= link_to "详情>>", "#", class: 'bottom-link'
+      .clear
 

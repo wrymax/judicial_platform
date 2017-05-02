@@ -2,11 +2,11 @@ nav
   img src="/images/home/logo1.jpg" class='mobile-nav-logo'
 .nav-placeholder
 
-.mobile-section
+.mobile-section.mobile-home-banner
   .title
-    | 专业的科技司法鉴定
+    | 湖北科技事务司法鉴定中心
   .desc
-    | 专注于农业（种植、养殖业）、知识产权、科技事务（水利电力）、微量物证、声像资料、计算机等领域的科技司法鉴定事务。
+    | 科学 · 严谨 · 诚信 · 服务
 
 
 .mobile-section
@@ -16,17 +16,29 @@ nav
     | 中心有国家司法鉴定人24人。特邀专家86人，并建有600余人的各行业专家信息库。经过实践和继续教育培训，造就了一批既有专业知识能力又有职业道德素质的鉴定人队伍。是湖北省鉴定范围广，鉴定人数多的综合性鉴定机构。
 
   .logos
-    = image_tag "/images/home/wd.jpg", class: 'college-logo'
+    = image_tag "/images/home/tsing.jpg", class: 'college-logo'
+    = image_tag "/images/home/peking.jpg", class: 'college-logo'
+    = image_tag "/images/home/whu.jpg", class: 'college-logo'
     = image_tag "/images/home/hust.jpg", class: 'college-logo'
     = image_tag "/images/home/zncjzf.jpg", class: 'college-logo'
     = image_tag "/images/home/hn.jpg", class: 'college-logo'
 
+.mobile-section
+  .title
+    | 六大鉴定领域
+  .desc
+    p
+      | 中心鉴定业务范围：农业（种植、养殖业）、知识产权、科技事务（水利电力）、微量物证、声像资料、计算机。
 
 .mobile-section
   .title
     | 丰富鉴定案例
   .desc
-    | 数十个成功案例，解决来自商业纠纷、环境污染、农业、电力、化学、知识产权等各专业领域的评估鉴定。
+    p
+      | 已接受来自北京、湖北、湖南、黑龙江、江苏、江西、四川、福建、山东、深圳河南、安徽等地人民法院、公安（刑侦及经侦部们）、检察部门、农业执法部门、仲裁机构、律师事务所、大中型企业及中介机构等的委托，在执业范围内开展司法鉴定工作，无一误鉴、错鉴。
+    p
+      | 为司法公正及行政执法提供科学依据，广受好评。
+
 
 .mobile-footer
   .info 
@@ -39,17 +51,33 @@ nav
     .contact-us
       .title
         | 联系我们
-      .desc
-        div
-          | 电话: 027-87317151
-        div
-          | Email: hbkjsj@126.com
-        div
-          | 传真：027-87890407
-        div
-          | QQ：6425584
-        div
-          | 地址：湖北省武汉市武昌区洪山路2号湖北科教大厦E座1号楼一楼
+      table.mobile-table
+        tr
+          td
+            | 电话:
+          td
+            = link_to "027-87317151", "tel:027-87317151"
+        tr
+          td
+            | Email:
+          td
+            = link_to "hbkjsj@126.com", "mailto:hbkjsj@126.com"
+        tr
+          td
+            | 传真:
+          td
+            | 027-87890407
+        tr
+          td
+            | QQ:
+          td
+            | 6425584
+        tr
+          td
+            | 地址:
+          td
+            | 湖北省武汉市武昌区洪山路2号湖北科教大厦E座1号楼一楼
+
     .clear
 
   .mobile-beian

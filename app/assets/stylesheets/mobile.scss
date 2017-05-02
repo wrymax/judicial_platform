@@ -19,7 +19,7 @@
     border-bottom: 1px solid #EEE;
     padding: 50px 20px;
     .title {
-      font-size: 26px;
+      font-size: 28px;
       margin: 15px auto 40px auto;
     }
     .desc {
@@ -27,12 +27,28 @@
       margin: 15px auto;
       line-height: 24px;
     }
+    .logos {
+      margin-top: 30px;
+    }
     .college-logo {
-      margin: 5px 10px;
-      width: 60px;
+      margin: 10px;
+      height: 30px;
+    }
+  }
+  .mobile-home-banner {
+    background: url('/images/home/banner.jpg') no-repeat no-repeat center center;
+    color: white;
+    .desc {
+      font-size: 20px;
     }
   }
   .mobile-footer {
+    .mobile-table {
+      td {
+        padding: 5px 15px 5px 0;
+        font-size: 12px;
+      }
+    }
     .mobile-beian {
       text-align: center;
       border-top: 1px solid #EEE;
