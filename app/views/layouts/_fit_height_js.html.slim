@@ -1,0 +1,10 @@
+javascript:
+  $(function(){
+    function fit_height() {
+      var height = $(window).height()- $('#nav').height() - $('#footer').height();
+      $('#container').css('minHeight', height);
+    }
+    fit_height();
+
+    $(window).resize(fit_height);
+  })

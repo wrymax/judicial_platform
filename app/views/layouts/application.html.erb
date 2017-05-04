@@ -17,10 +17,12 @@
   <body>
     <%= render 'layouts/nav' %> 
     <%= render 'layouts/flash_message' %>
-    <%= yield %>
+    <div id="container">
+      <%= yield %>
+    </div>
     <%= render 'layouts/footer' %>
-
+    <%= render 'layouts/side_contact' %>
     <%= render 'layouts/bind_select2' %>
-    
+    <%= render 'layouts/fit_height_js' %>
   </body>
 </html>

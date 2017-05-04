@@ -11,7 +11,7 @@ html
   body
     = render 'layouts/nav'
     = render 'layouts/flash_message'
-    .container.admin-container
+    .container.admin-container#container
       = render 'helps/sidebar'
 
       .pull-right.admin-main
@@ -19,3 +19,6 @@ html
       .clear
     = render 'layouts/footer'
     /= render 'layouts/bind_select2'
+    = render 'layouts/side_contact'
+
+    = render 'layouts/fit_height_js'
