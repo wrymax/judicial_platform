@@ -1,7 +1,3 @@
-nav
-  img src="/images/home/logo1.jpg" class='mobile-nav-logo'
-.nav-placeholder
-
 .mobile-section.mobile-home-banner
   .title
     | 湖北科技事务司法鉴定中心
@@ -29,6 +25,9 @@ nav
   .desc
     p
       | 中心鉴定业务范围：农业（种植、养殖业）、知识产权、科技事务（水利电力）、微量物证、声像资料、计算机。
+  .buttons
+    = link_to "中心专业资质证明", cert_mobile_home_index_path, class: 'btn btn-info btn-outline'
+
 
 .mobile-section
   .title
@@ -56,6 +55,8 @@ nav
           td
             | 电话:
           td
+            = link_to "027-87890407", "tel:027-87890407"
+            | 、
             = link_to "027-87317151", "tel:027-87317151"
         tr
           td

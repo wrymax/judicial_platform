@@ -73,6 +73,9 @@ Rails.application.routes.draw do
 
   namespace :mobile do
     resources :home, only: [:index] do
+      collection do
+        get :cert
+      end
     end
   end
 end

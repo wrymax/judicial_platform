@@ -3,4 +3,7 @@ class Mobile::HomeController < ApplicationController
 
   def index
   end
+
+  def cert
+  end
 end
