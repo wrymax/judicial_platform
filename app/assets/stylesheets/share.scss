@@ -1,8 +1,6 @@
 // share styles
 body {
   font-family: -apple-system-font, Helvetica Neue, Microsoft YaHei Light,Microsoft YaHei, sans-serif;
-  font-weight: thin;
-  // background: #f6f6f6;
   color: #666;
 }
 a {
@@ -98,4 +96,22 @@ a.glyphicon:before {
 }
 body hr {
   margin: 10px auto;
+}
+ol {
+  li {
+    line-height: 26px;
+  }
+}
+.ol-header {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+table.no-border {
+  td {
+    border: 0 !important;
+  }
+}
+span.blank {
+  margin-left: 20px;
 }
