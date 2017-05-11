@@ -12,42 +12,9 @@
       = link_to "查看我的鉴定需求", my_needs_users_path, class: 'btn btn-lg btn-info btn-outline'
 
 .home-section
-  .container.text-center
-    .info
-      .title
-        | 顶尖专家团队
-      .desc
-        p
-          | 中心囊括国家司法鉴定人24人、特邀专家86人，并建有600余人的各行业专家信息库。
-        p
-          | 整合业界、学界精英泰斗，打造最权威专业的科技司法鉴定平台。
-      .logos
-        = image_tag "/images/home/tsing.jpg", class: 'college-logo'
-        = image_tag "/images/home/peking.jpg", class: 'college-logo'
-        = image_tag "/images/home/whu.jpg", class: 'college-logo'
-        = image_tag "/images/home/hust.jpg", class: 'college-logo'
-        = image_tag "/images/home/zncjzf.jpg", class: 'college-logo'
-        = image_tag "/images/home/hn.jpg", class: 'college-logo'
-      .buttons
-        = link_to "了解更多", experts_users_path, class: 'btn btn-lg btn-info btn-outline'
-
-.home-section
-  .container.text-center
-    .info
-      .title
-        | 丰富鉴定案例
-      .desc
-        p
-          | 已接受来自北京、湖北、湖南、黑龙江、江苏、江西、四川、福建、山东、深圳河南、安徽等地人民法院、公安（刑侦及经侦部们）、检察部门、农业执法部门、仲裁机构、律师事务所、大中型企业及中介机构等的委托，在执业范围内开展司法鉴定工作，无一误鉴、错鉴。
-        p
-          | 为司法公正及行政执法提供科学依据，广受好评。
-      .buttons
-        = link_to "了解更多", judicial_cases_path, class: 'btn btn-lg btn-success btn-outline'
-
-.home-section
   .container
     .text-center.title
-      | 广泛鉴定领域
+      | 六大鉴定领域
     .tables
       .table-section
         .detail
@@ -123,4 +90,41 @@
               | 是运用物理学、化学和仪器分析等科学方法，通过对有关物质材料的成分及其结构进行定性、定量分析，对检材的种类、检材和嫌疑样本的同类性和同一性进行鉴定。
           /= link_to "详情>>", "#", class: 'bottom-link'
       .clear
+
+    .buttons.text-center
+      = link_to "中心专业资质证明", cert_helps_path, class: 'btn btn-lg btn-primary btn-outline'
+
+.home-section
+  .container.text-center
+    .info
+      .title
+        | 顶尖专家团队
+      .desc
+        p
+          | 中心囊括国家司法鉴定人24人、特邀专家86人，并建有600余人的各行业专家信息库。
+        p
+          | 整合业界、学界精英泰斗，打造最权威专业的科技司法鉴定平台。
+      .logos
+        = image_tag "/images/home/tsing.jpg", class: 'college-logo'
+        = image_tag "/images/home/peking.jpg", class: 'college-logo'
+        = image_tag "/images/home/whu.jpg", class: 'college-logo'
+        = image_tag "/images/home/hust.jpg", class: 'college-logo'
+        = image_tag "/images/home/zncjzf.jpg", class: 'college-logo'
+        = image_tag "/images/home/hn.jpg", class: 'college-logo'
+      .buttons
+        = link_to "了解更多", experts_users_path, class: 'btn btn-lg btn-info btn-outline'
+
+.home-section
+  .container.text-center
+    .info
+      .title
+        | 丰富鉴定案例
+      .desc
+        p
+          | 已接受来自北京、湖北、湖南、黑龙江、江苏、江西、四川、福建、山东、深圳河南、安徽等地人民法院、公安（刑侦及经侦部们）、检察部门、农业执法部门、仲裁机构、律师事务所、大中型企业及中介机构等的委托，在执业范围内开展司法鉴定工作，无一误鉴、错鉴。
+        p
+          | 为司法公正及行政执法提供科学依据，广受好评。
+      .buttons
+        = link_to "了解更多", judicial_cases_path, class: 'btn btn-lg btn-success btn-outline'
+
 

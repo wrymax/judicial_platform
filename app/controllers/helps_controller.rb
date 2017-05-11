@@ -12,4 +12,7 @@ class HelpsController < ApplicationController
 
   def address
   end
+
+  def cert
+  end
 end

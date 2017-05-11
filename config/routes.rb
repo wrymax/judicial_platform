@@ -41,6 +41,7 @@ Rails.application.routes.draw do
       get :risks
       get :explanations
       get :complain
+      get :cert
     end
   end
 

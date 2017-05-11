@@ -12,6 +12,7 @@
     span class="glyphicon glyphicon-th"
     |  司法鉴定须知
   .list-group
+    = link_to "专业资质证明", cert_helps_path, class: "list-group-item #{"active" if params[:action] == 'cert'}"
     = link_to "司法鉴定程序", procedures_helps_path, class: "list-group-item #{"active" if params[:action] == 'procedures'}"
     = link_to "委托鉴定指南", guidelines_helps_path, class: "list-group-item #{"active" if params[:action] == 'guidelines'}"
     = link_to "鉴定风险告知", risks_helps_path, class: "list-group-item #{"active" if params[:action] == 'risks'}"
