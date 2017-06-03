@@ -1,25 +1,28 @@
+$color: #337ab7;
+
 .side_contact {
   position: fixed;
   right: 0;
   bottom: 35%;
-  width: 75px;
+  width: 120px;
   font-size: 14px;
   text-align: center;
   .block {
     background: #FFF;
-    border: 1px solid #8e9ca9;
+    border: 1px solid $color;
     border-right: 0;
     margin-bottom: 10px;
     a {
       display: block;
+      font-size: 16px;
       width: 100%;
-      color: #8e9ca9;
-      border-top: 1px solid #8e9ca9;
+      color: #337ab7;
+      border-top: 1px solid $color;
       height: 44px;
       line-height: 44px;
       cursor: pointer;
       &:hover {
-        background: #8e9ca9;
+        background: $color;
         color: white;
       }
       &:first-child {

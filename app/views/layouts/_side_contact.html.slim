@@ -4,3 +4,9 @@
       | 联系我们
     = link_to new_feedback_path do
       | 留言反馈
+    - if !current_user || current_user.demander?
+      = link_to "在线鉴定申请", new_need_path
+      = link_to "申请加入专家", new_expert_application_path
+    - elsif current_user.expert?
+      = link_to "查看鉴定需求", my_needs_users_path
+

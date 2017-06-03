@@ -1,7 +1,7 @@
 $border-color: #EEE;
 
 .home-banner {
-  height: 500px;
+  height: 410px;
   background-image: url('/images/home/banner.jpg');
   background-size: cover;
   position: relative;
@@ -103,9 +103,14 @@ $border-color: #EEE;
       }
     }
     .table-title {
-      color: #333;
-      font-size: 20px;
-      line-height: 22px;
+      &, a {
+        color: #333;
+        font-size: 20px;
+        line-height: 22px;
+      }
+      a:hover {
+        color: #428bca;
+      }
       margin-bottom: 10px;
       margin-top: 0;
       img {
