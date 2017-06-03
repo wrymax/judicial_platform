@@ -4,6 +4,11 @@
       = @work_dynamic.title
     hr
     .content
+      - if @work_dynamic.picture?
+        .p-picture
+          = image_tag @work_dynamic.picture(:original)
+          .clear
+
       = simple_format @work_dynamic.content
 
   .user-sidebar.pull-right

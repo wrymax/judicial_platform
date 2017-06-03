@@ -51,6 +51,10 @@
     width: 69%;
     margin-right: 1%;
     font-size: 12px;
+    .name {
+      border-bottom: 1px solid #EEE;
+      padding-bottom: 20px;
+    }
     .time, .tags {
       margin: 8px 0;
       font-size: 13px;
@@ -61,7 +65,9 @@
     }
     .content {
       margin-top: 30px;
-      line-height: 22px;
+      line-height: 26px;
+      font-size: 13px;
+      text-indent: 26px;
     }
   }
   .judicial-case-sidebar {

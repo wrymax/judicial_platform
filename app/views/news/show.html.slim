@@ -4,6 +4,11 @@
       = @news.title
     hr
     .content
+      - if @news.picture?
+        .p-picture
+          = image_tag @news.picture(:original)
+          .clear
+
       = simple_format @news.content
 
   .user-sidebar.pull-right

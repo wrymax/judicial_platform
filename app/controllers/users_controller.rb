@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def experts
     @users = User.experts.includes(:expert_profile).paginate(page: params[:page], per_page: 12)
+    @title = "鉴定专家"
 
     if request.format.json?
       ret = User.experts.where("name like ?", "%#{params[:q]}%").map do |user|
@@ -22,6 +23,7 @@ class UsersController < ApplicationController
     if @user.expert?
       @cases = @user.judicial_cases.latest.paginate(page: 1, per_page: 4)
       @similar_experts = @user.similar_experts.paginate(page: 1, per_page: 4)
+      @title = "鉴定专家 | #{@user.name}"
     end
   end
 

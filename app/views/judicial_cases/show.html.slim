@@ -1,7 +1,7 @@
 .container
   .show-judicial-case
     .pull-left.judicial-case-main.white-board.padding
-      h3.name
+      h4.name.text-center
         = @judicial_case.name
       .tags
         span
@@ -14,6 +14,10 @@
         = @judicial_case.created_at.to_date
 
       .content
+        - if @judicial_case.picture?
+          .p-picture
+            = image_tag @judicial_case.picture(:original)
+            .clear
         = simple_format @judicial_case.content
 
     .pull-right.judicial-case-sidebar.white-board.padding

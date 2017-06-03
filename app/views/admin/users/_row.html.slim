@@ -12,6 +12,16 @@ tr
       span
         | 执业证号: 
       = user.expert_profile.license_no
+
+    .contact
+      span
+        | 手机: 
+        = user.phone
+
+      span style='margin-left: 10px;'
+        | 邮箱: 
+        = user.email
+
     .tags
       = render partial: 'tags/tag_block', collection: user.keywords, as: :tag
 

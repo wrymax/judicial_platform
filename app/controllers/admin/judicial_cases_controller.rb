@@ -20,7 +20,7 @@ class Admin::JudicialCasesController < Admin::ApplicationController
 
   def update
     @judicial_case = JudicialCase.find(params[:id])
-    if @judicial_case.update(judicial_case_params)
+    if @judicial_case.update!(judicial_case_params)
       flash[:notice] = "案例已更新"
       redirect_to :back
     else
