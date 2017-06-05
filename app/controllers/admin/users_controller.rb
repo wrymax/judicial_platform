@@ -8,6 +8,11 @@ class Admin::UsersController < Admin::ApplicationController
     @experts = User.experts.latest.paginate(page: params[:page], per_page: 10)
   end
 
+  def show
+    @user = User.find(params[:id])
+    redirect_to edit_admin_user_path(@user)
+  end
+
   def edit
     @user = User.find(params[:id])
     validate_all_fields(@user)
