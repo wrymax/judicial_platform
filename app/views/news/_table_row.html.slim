@@ -1,0 +1,8 @@
+tr
+  td
+    h4.row-title
+      = link_to news.title, news_path(news)
+    .time
+      = news.created_at.to_date
+    p.desc
+      = simple_format news.content.truncate(100)

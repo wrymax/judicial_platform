@@ -1,4 +1,8 @@
 .container
+  .text-center
+    h3.list-title
+      | 鉴定专家
+
   .users-list#experts
     = render partial: 'users/user_block', collection: @users, as: :user
     .clear

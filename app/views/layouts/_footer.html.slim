@@ -2,13 +2,15 @@ footer.footer#footer
   .container
     .work-dynamics.footer-section-list.pull-left
       h4
-        | 工作动态
+        = link_to work_dynamics_path do
+          | 工作动态
       ul.work-dynamic-list.footer-ul
         = render partial: 'work_dynamics/row', collection: WorkDynamic.latest.paginate(page: 1, per_page: 5), as: :work_dynamic
 
     .news.footer-section-list.pull-left
       h4
-        | 新闻资讯
+        = link_to news_index_path do
+          | 新闻资讯
       ul.news-list.footer-ul
         = render partial: 'news/row', collection: News.latest.paginate(page: 1, per_page: 5), as: :news
 

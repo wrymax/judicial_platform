@@ -1,0 +1,12 @@
+.text-center
+  h3.list-title
+    | 新闻资讯
+
+.container.show-user
+
+  table.table-striped.work-dynamics
+    = render partial: 'news/table_row', collection: @news, as: :news
+
+  .page-wrapper
+    = will_paginate @news, renderer: BootstrapPagination::Rails
+

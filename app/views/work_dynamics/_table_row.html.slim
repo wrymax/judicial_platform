@@ -1,0 +1,9 @@
+tr
+  td
+    h4.row-title
+      = link_to work_dynamic.title, work_dynamic_path(work_dynamic)
+    .time
+      = work_dynamic.created_at.to_date
+    p.desc
+      = simple_format work_dynamic.content.truncate(100)
+

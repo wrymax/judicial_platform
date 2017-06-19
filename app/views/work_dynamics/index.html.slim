@@ -1,0 +1,11 @@
+.text-center
+  h3.list-title
+    | 工作动态
+
+.container.show-user
+
+  table.table-striped.work-dynamics
+    = render partial: 'work_dynamics/table_row', collection: @work_dynamics, as: :work_dynamic
+
+  .page-wrapper
+    = will_paginate @work_dynamics, renderer: BootstrapPagination::Rails
