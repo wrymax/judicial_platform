@@ -3,7 +3,12 @@ class UsersController < ApplicationController
   load_and_authorize_resource :user, only: [:update]
 
   def experts
-    @users = User.experts.includes(:expert_profile).paginate(page: params[:page], per_page: 12)
+    if params[:tag] && tag = Tag.find_by_name(params[:tag])
+      @users = User.experts.tagged_with(params[:tag]).includes(:expert_profile).paginate(page: params[:page], per_page: 12)
+    else
+      @users = User.experts.includes(:expert_profile).paginate(page: params[:page], per_page: 12)
+    end
+
     @title = "鉴定专家"
 
     if request.format.json?

@@ -3,9 +3,15 @@
     h3.list-title
       | 鉴定专家
 
+  = render 'filters'
+
   .users-list#experts
-    = render partial: 'users/user_block', collection: @users, as: :user
-    .clear
+    - if @users.present?
+      = render partial: 'users/user_block', collection: @users, as: :user
+      .clear
+    - else
+      .list-blank
+        | 该领域暂无专家，请尝试搜索其他领域
 
     .page-wrapper
       = will_paginate @users, renderer: BootstrapPagination::Rails
