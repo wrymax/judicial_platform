@@ -2,8 +2,13 @@ nav.navbar.header-nav#nav
   .container-fluid
      .collapse.navbar-collapse#bs-example-navbar-collapse-9
        .container
-         = link_to '/' do
-           img src="/images/home/logo1.jpg" class='pull-left nav-logo'
+         = link_to '/', class: 'nav-link' do
+           img src="/images/home/hbsfjd-logo.png" class='pull-left nav-logo'
+           div class='nav-text'
+             p class='nav-text-title'
+               | 湖北晟明科技司法鉴定所
+             p class='nav-text-sub'
+               | Hubei Shengming Judicial Auth Center of Sci. and Tech Affairs
          ul class="nav navbar-nav"
            li class=("active" if params[:action] == 'experts')
              = link_to "鉴定专家", experts_users_path

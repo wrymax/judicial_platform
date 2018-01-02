@@ -8,6 +8,10 @@
   padding: 10px 15px;
   .name a {
     color: #333;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    overflow: hidden;
     &:hover {
       color: #3c8cf0;
     }
