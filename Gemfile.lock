@@ -1,5 +1,5 @@
 GEM
-  remote: https://ruby.taobao.org/
+  remote: http://ruby.taobao.org/
   specs:
     actioncable (5.0.1)
       actionpack (= 5.0.1)
@@ -272,4 +272,4 @@ DEPENDENCIES
   will_paginate-bootstrap
 
 BUNDLED WITH
-   1.14.5
+   1.17.1
