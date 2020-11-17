@@ -49,12 +49,12 @@
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
-server "119.23.29.167",
-  user: "root",
+server "18.166.235.224",
+  user: "ubuntu",
   roles: %w{web app db},
   ssh_options: {
-    user: "root", 
-    forward_agent: false,
-    auth_methods: %w(password), 
-    password: "Wrymax57148778"
+    user: "ubuntu", 
+    forward_agent: false
+    # auth_methods: %w(password), 
+    # password: "Wrymax57148778"
   }
