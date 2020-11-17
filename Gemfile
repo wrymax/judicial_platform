@@ -6,8 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 # server, db
-gem 'rails'
-gem 'mysql2'
+gem 'rails', '~> 5.1'
+gem 'mysql2', '~> 0.4.10'
 gem 'puma', '~> 3.0'
 
 # front-end
